@@ -23,7 +23,7 @@ async def send(event):
     message_id = event.message.id
     thumb = mafia_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {mafia}\n\n⚡ **[LEGENDARY AF MAFIABOT](t.me/MafiaBot_Support)** ⚡"
+    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {mafia}\n\n⚡ **[Lᴇɢᴇɴᴅʀʏ Aғ Sᴀᴠᴀɢᴇ Bᴏᴛ](t.me/SAVAGE_USERBOT)** ⚡"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
@@ -71,7 +71,7 @@ async def install(event):
                             a = "__Installing...__"
                             b = 1
                         await event.edit(a)
-                    return await event.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {mafia}\n\n{string}\n\n        ⚡ **[LEGENDARY AF MAFIABOT](t.me/MafiaBot_Support)** ⚡", link_preview=False)
+                    return await event.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {mafia}\n\n{string}\n\n        ⚡ **[Lᴇɢᴇɴᴅʀʏ Aғ Sᴀᴠᴀɢᴇ Bᴏᴛ](t.me/SAVAGE_USERBOT)** ⚡", link_preview=False)
                 return await event.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -102,10 +102,10 @@ async def unload(event):
     shortname = event.pattern_match["shortname"]
     try:
         remove_plugin(shortname)
-        await event.edit(f"Successfully unloaded `{shortname}`")
+        await event.edit(f"Sᴜᴄᴄᴇssғᴜʟʟʏ Uɴʟᴏᴀᴅᴇᴅ `{shortname}`")
     except Exception as e:
         await event.edit(
-            "Successfully unloaded {shortname}\n{}".format(
+            "Sᴜᴄᴄᴇssғᴜʟʟʏ Uɴʟᴏᴀᴅᴇᴅ {shortname}\n{}".format(
                 shortname, str(e)
             )
         )
@@ -123,7 +123,7 @@ async def load(event):
         except BaseException:
             pass
         load_module(shortname)
-        await event.edit(f"Successfully loaded `{shortname}`")
+        await event.edit(f"SᴜᴄᴄᴇssFᴜLʟʏ Lᴏᴀᴅᴇᴅ `{shortname}`")
     except Exception as e:
         await event.edit(
             f"Sorry, could not load {shortname} because of the following error.\n{str(e)}"
