@@ -36,7 +36,7 @@ edit_time = 16
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 """ =======================CONSTANTS====================== """
 
-pm_caption = "__                       **😎🔥 𝐒𝐀𝐕𝐀𝐆𝐄_𝐁𝐎𝐓 😎🔥**  __\n\n"
+pm_caption = "__                       **😎🔥 𝐒𝐀𝐕𝐀𝐆𝐄 2.0 😎🔥**  __\n\n"
 pm_caption += f"               __↼🄼🄰🅂🅃🄴🅁⇀__\n**      『{DEFAULTUSER}』**\n\n"
 pm_caption += "✘ ΔβØỮŦ Μ¥ Ş¥ŞŦ€Μ ✘\n\n"
 pm_caption += "➾ 𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍         ➣ 𝟏.𝟏𝟕.𝟓\n"
@@ -46,7 +46,7 @@ pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐎𝐔𝐏 ➣ [𝐉�
 pm_caption += "➾ 𝐂𝐑𝐄𝐀𝐓𝐎𝐑     ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@SAMEER_795)\n" 
                   
 pm_caption += " \n"
-pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬✨](https://github.com/sameerpanthi/SAVAGE-IS-BACK)"
+pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬 2.0✨](https://github.com/sameerpanthi/SAVAGe-2.0-bot)"
 
 
 # @command(outgoing=True, pattern="^.alive$")
