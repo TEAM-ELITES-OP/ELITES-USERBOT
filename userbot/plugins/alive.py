@@ -33,30 +33,21 @@ mafia = bot.uid
 
 edit_time = 16
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/2408a2877646132ac52fd.mp4"
-file2 = "https://telegra.ph/file/e97d640332ce5eadb3f89.mp4"
-file3 = "https://telegra.ph/file/0b2862d312a2aeb804b36.mp4"
-file4 = "https://telegra.ph/file/866c79e351350a08f2b06.mp4"
+file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 """ =======================CONSTANTS====================== """
-pm_caption = "  __**🔥🔥𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋 𝕀𝕊 𝔸𝕃𝕀𝕍𝔼🔥🔥**__\n\n"
 
-pm_caption += (
-    f"                 👑𝕄𝔸𝕊𝕋𝔼ℝ👑\n**  『😈[{DEFAULTUSER}](tg://user?id={mafia})😈』**\n\n"
-)
+pm_caption = "__                       **😎🔥 𝐒𝐀𝐕𝐀𝐆𝐄_𝐁𝐎𝐓 😎🔥**  __\n\n"
+pm_caption += f"               __↼🄼🄰🅂🅃🄴🅁⇀__\n**      『{DEFAULTUSER}』**\n\n"
+pm_caption += "✘ ΔβØỮŦ Μ¥ Ş¥ŞŦ€Μ ✘\n\n"
+pm_caption += "➾ 𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍         ➣ 𝟏.𝟏𝟕.𝟓\n"
+pm_caption += "➾ 𝐓𝐄𝐀𝐌 𝐆𝐑𝐎𝐔𝐏      ➣ [𝐒𝐀𝐕𝐀𝐆𝐄](https://t.me/joinchat/RPrJW2IU-Uo4MGRl)\n"
+pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐂𝐇𝐍𝐍𝐋 ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/0KCyT0MHyAhmMmRl)\n"
+pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐎𝐔𝐏 ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/qCIk-af6VW1kNDll)\n"
+pm_caption += "➾ 𝐂𝐑𝐄𝐀𝐓𝐎𝐑     ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@SAMEER_795)\n" 
+                  
+pm_caption += " \n"
+pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬✨](https://github.com/sameerpanthi/SAVAGE-IS-BACK)"
 
-pm_caption += "🛡️TELETHON🛡️ : `1.15.0` \n\n"
-
-pm_caption += f"😈𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋😈 : `{mafiaversion}`\n\n"
-
-pm_caption += f"😱SUDO😱            : `{sudou}`\n\n"
-
-pm_caption += "😇CHANNEL😇️   : [ᴊᴏɪɴ](https://t.me/MafiaBot_Support)\n\n"
-
-pm_caption += "😎CREATOR😎    : [Himanshu](https://t.me/H1M4N5HU0P)\n\n"
-
-pm_caption += "🤩SUPPORTER🤩    :[HellBoy](https://t.me/kraken_the_badass)\n\n"
-
-pm_caption += "      [🔥REPO🔥](https://github.com/H1M4N5HU0P/MAFIA-BOT) 🔹 [📜License📜](https://github.com/H1M4N5HU0P/MAFIA-BOT/blob/main/LICENSE)"
 
 # @command(outgoing=True, pattern="^.alive$")
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
