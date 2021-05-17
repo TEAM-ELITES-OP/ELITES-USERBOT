@@ -8,10 +8,10 @@
 
 -------------------------------------------------
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/sameerpanthi/SAVAGE-2.0-bot?utm_source=github.com&utm_medium=referral&utm_content=sameerpanthi/SAVAGE-2.0-bot&utm_campaign=Badge_Grade_Settings)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f7c51539e67b483bb8d7749acca51d3a)](https://app.codacy.com/gh/sameerpanthi/SAVAGE-2.0-BOT?utm_source=github.com&utm_medium=referral&utm_content=sameerpanthi/SAVAGE-2.0-BOT&utm_campaign=Badge_Grade_Settings)
 [![Python 3.6](https://img.shields.io/badge/Python-3.6%20or%20newer-blue.svg)](https://www.python.org/downloads/release/python-360/)
-![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/SAVAGE-2.0-bot)
-[![HitCount](http://hits.dwyl.com/sameerpanthi/SAVAGE-2.0-bot.svg)](http://hits.dwyl.com/sameerpanthi/SAVAGE-2.0-bot)
+![GitHub repo size](https://img.shields.io/github/repo-size/sameerpanthi/SAVAGE-2.0-BOT)
+[![HitCount](http://hits.dwyl.com/sameerpanthi/SAVAGE-2.0-bot.svg)](http://hits.dwyl.com/sameerpanthi/SAVAGE-2.0-BOT)
 [![Contact Me](https://img.shields.io/badge/Telegram-Contact%20Me-informational)](https://t.me/SAMEER_795)
 <img src="https://img.shields.io/badge/Maintained%3F-Yes-green?style=for-the-badge">
 -------------------------------------------------
@@ -22,7 +22,7 @@
 
 
 ## STATUS OF THIS BOTS 
-<p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-bot/network/members"><img src="https://img.shields.io/github/forks/sameerpanthi/SAVAGE-2.0-bot?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-bot/stargazers"><img src="https://img.shields.io/github/stars/sameerpanthi/SAVAGE-2.0-bot?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-bot"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-bot?"><img src="https://img.shields.io/github/last-commit/sameerpanthi/SAVAGE-2.0-bot?style=plastic"></a>
+<p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-BOT/network/members"><img src="https://img.shields.io/github/forks/sameerpanthi/SAVAGE-2.0-BOT?label=Forks&logoColor=Black&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-BOT/stargazers"><img src="https://img.shields.io/github/stars/sameerpanthi/SAVAGE-2.0-BOT?logoColor=Blue&style=social"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-BOT"></a><p align="left"><a href="https://github.com/sameerpanthi/SAVAGE-2.0-BOT?"><img src="https://img.shields.io/github/last-commit/sameerpanthi/SAVAGE-2.0-BOT?style=plastic"></a>
 
 
 -------------------------------------------------
@@ -40,7 +40,7 @@
 
 ## FOR DEPLOY BOT 
 
-<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsameerpanthi%2Fsavage-2.0-userbot&template=https%3A%2F%2Fgithub.com%2Fsameerpanthi%2Fsavage-2.0-userbot" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
+<a href="https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2Fsameerpanthi%2FSAVAGE-2.0-BOT&template=https%3A%2F%2Fgithub.com%2Fsameerpanthi%2FSAVAGE-2.0-BOT" rel="nofollow" style="background-color: initial; box-sizing: border-box; color: #0366d6; text-decoration-line: none;"><img alt="Deploy" data-canonical-src="https://www.herokucdn.com/deploy/button.svg" src="https://camo.githubusercontent.com/83b0e95b38892b49184e07ad572c94c8038323fb/68747470733a2f2f7777772e6865726f6b7563646e2e636f6d2f6465706c6f792f627574746f6e2e737667" style="border-style: none; box-sizing: initial; max-width: 100%;" /></a></div>
 
 
 ------------------------------------------------
