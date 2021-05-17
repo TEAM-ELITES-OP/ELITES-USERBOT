@@ -46,7 +46,7 @@ pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐎𝐔𝐏 ➣ [𝐉�
 pm_caption += "➾ 𝐂𝐑𝐄𝐀𝐓𝐎𝐑     ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@SAMEER_795)\n" 
                   
 pm_caption += " \n"
-pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬 2.0✨](https://github.com/sameerpanthi/SAVAGe-2.0-bot)"
+pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬 2.0✨](https://github.com/sameerpanthi/SAVAGE-2.0-BOT)"
 
 
 # @command(outgoing=True, pattern="^.alive$")
