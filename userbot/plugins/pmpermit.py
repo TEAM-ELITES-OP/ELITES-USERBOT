@@ -20,7 +20,7 @@ PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
 MAFIAPIC = (
     PMPERMIT_PIC
     if PMPERMIT_PIC
-    else "https://telegra.ph/file/8b086b95491df9f0d4f58.jpg"
+    else "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -31,9 +31,9 @@ h1m4n5hu0p = (
     else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's MafiaBot.**\n__Now GTFO, i'm busy__"
+USER_BOT_WARN_ZERO = "**You were spamming my sweet master's inbox, henceforth you have been blocked by my master's savage bot.**\n__Now GTFO, i'm busy__"
 USER_BOT_NO_WARN = (
-    "Hello, This is **MafiaBot Ultra Private Security Protocol⚠️**.\n"
+    "Hello, This is **𝐒𝐀𝐕𝐀𝐆𝐄 Ultra Private Security Protocol⚠️**.\n"
     f"This is my master {DEFAULTUSER}'s Inbox\n"
     f"\n**{h1m4n5hu0p}**\n\n"
     "To start a valid conversation\n🔱Register Your Request!🔱\nSend `/start` To Register Your Request\nHopefully u will get a reply🔥"
@@ -205,7 +205,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     out_file,
                     force_document=True,
                     allow_cache=False,
-                    caption="[MafiaBot]Current Approved PMs",
+                    caption="[𝐒𝐀𝐕𝐀𝐆𝐄 𝐁𝐎𝐓]Current Approved PMs",
                     reply_to=event,
                 )
                 await event.delete()
