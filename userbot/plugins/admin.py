@@ -79,7 +79,7 @@ async def set_group_photo(gpic):
     if gpic.fwd_from:
         return
     if not gpic.is_group:
-        await edit_or_reply(gpic, "`I don't think this is a group.`")
+        await edit_or_reply(gpic, "Yᴇ ɢʀᴘ Nʜɪ Hᴇ Kᴏɪ Gʀᴘ Mᴇɪɴ Usᴇ Kʀᴏ")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -142,12 +142,12 @@ async def promote(promt):
     mafiaevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "??????"
+        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await mafiaevent.edit("Promoted Successfully!")
+        await mafiaevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
     except BadRequestError:
         await mafiaevent.edit(NO_PERM)
         return
@@ -173,7 +173,7 @@ async def demote(dmod):
         await edit_or_reply(dmod, NO_ADMIN)
         return
     mafiaevent = await edit_or_reply(dmod, "Demoting...")
-    rank = "??????"
+    rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
     user = await get_user_from_event(dmod)
     user = user[0]
     if not user:
@@ -216,7 +216,7 @@ async def ban(bon):
     user, reason = await get_user_from_event(bon)
     if not user:
         return
-    mafiaevent = await edit_or_reply(bon, "Banning this retard")
+    mafiaevent = await edit_or_reply(bon, "Banning this Fᴜᴄᴋᴇʀ")
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
@@ -308,7 +308,7 @@ async def pin(msg):
     except BadRequestError:
         await edit_or_reply(msg, NO_PERM)
         return
-    hmm = await edit_or_reply(msg, "Pinned Successfully!")
+    hmm = await edit_or_reply(msg, "Kʀ ᴅɪʏᴀ ᴘɪɴ🙂!")
     user = await get_user_from_id(msg.sender_id, msg)
     if BOTLOG:
         await msg.client.send_message(
