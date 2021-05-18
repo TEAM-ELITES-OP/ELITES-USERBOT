@@ -60,7 +60,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
                 + "for the proper functioning of afk functionality "
-                + "Ask in @mafiaBot_Official_Chat to get help setting this value\n\n `{}`".format(str(e)),
+                + "Ask in @SAVAGE_USERBOT to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )
@@ -94,12 +94,13 @@ async def on_afk(event):
         return False
     if USER_AFK and not (await event.get_sender()).bot:
         msg = None
-        
+                             
         message_to_reply = (
-            f"Hey!! My Legend master [{DEFAULTUSER}](tg://user?id={mafia}) is currently offline... Since when?\n**For** `{total_afk_time}`\n"
-            + f"\n\n👇__The Reason Is__👇 :-\n`{reason}`"
+            f"HᴇY!! Mʏ MᴀsTᴇʀ Is CᴜʀRᴇɴᴛʟʏ OғғʟɪNᴇ 😗.. Hᴇ/Sʜᴇ ɪs Nᴏᴛ FᴜʀsᴀTɪʏᴀ ʟɪKᴇ ᴜ 😂. Lᴇᴀᴠᴇ ᴜʀ ᴍsɢ ʜᴇʀᴇ ..Wʜᴇɴ ᴍʏ MᴀsTᴇʀ Is ɴᴏᴛ Bᴜsʏ ..ʜᴇ/sʜᴇ Wɪʟʟ Rᴇᴘʟʏ ᴜ.\n Mʏ MᴀSᴛᴇʀ ɪs OғғLɪɴᴇ SɪNᴄᴇ ᴡHᴇɴ? Yᴏᴜ ᴀSᴋ ?\n**FᴏR** `{total_afk_time}`😗"
+            + f"\n\n__Reason__ :-\n**{reason}**"
+            
   if reason
-            else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be back when I feel to come🚶"
+            else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be bacK when I am Free"
         )
         msg = await event.reply(message_to_reply, file=mafiapic)
         await asyncio.sleep(2)
