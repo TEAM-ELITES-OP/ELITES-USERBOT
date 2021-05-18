@@ -21,7 +21,7 @@ jobs:
 
           find: "mafia"
 
-          replace: "from SAVAGE"
+          replace: "SAVAGE"
 
       - name: Create Pull Request
 
