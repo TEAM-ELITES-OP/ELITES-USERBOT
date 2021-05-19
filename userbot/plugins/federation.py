@@ -351,18 +351,12 @@ async def _(event):
             REASON = " #MassBanned "
     try:
         int(FBAN)
-        if int(FBAN) == 1118936839 or int(FBAN) == 630654925 or int(FBAN) == 719195224 or int(FBAN) == 1212368262 or int(FBAN) == 1425926469:
+        if int(FBAN) == 1559064347:
             await event.edit("Something Went wrong!")
             return
     except:
         if (
-            FBAN == "@Surv_ivor"
-            or FBAN == "@Sur_ivor"
-            or FBAN == "@HeisenbergTheDanger"
-            or FBAN == "@xditya"
-            or FBAN == "@Bhomik16"
-            or FBAN == "@H1M4N5HU0P"
-            or FBAN == "@Pacifist_Op"
+            FBAN == "@sameer_795" 
     
         ):
             await event.edit("Hey Nigga, You can't superfban your father😏")
@@ -443,7 +437,7 @@ async def _(event):
             continue
         await event.client.send_message(chat, f"/joinfed {fed}")
         await asyncio.sleep(3)
-        await event.client.send_message(chat, f"/fban {FBAN} {REASON} \n\n#SUPERFBAN_BY_MAFIABOT")
+        await event.client.send_message(chat, f"/fban {FBAN} {REASON} \n\n#SUPERFBAN_BY_SAVAGEBOT")
         await asyncio.sleep(3)
     await event.edit(f"SuperFBan Completed. Affected {len(fedList) - exCount} feds by [{DEFAULTUSER}](tg://user?id={mafia}) 😈")
 
@@ -518,7 +512,7 @@ async def _(event):
     for fed in fedList:
         await event.client.send_message(chat, f"/joinfed {fed}")
         await asyncio.sleep(3)
-        await event.client.send_message(chat, f"/unfban {FBAN} \n\n#SUPERUNFBAN_BY_MAFIABOT")
+        await event.client.send_message(chat, f"/unfban {FBAN} \n\n#SUPERUNFBAN_BY_SAVAGEBOT")
         await asyncio.sleep(3)
     await event.edit(f"SuperUnFBan Completed. Affected {len(fedList)} feds by [{DEFAULTUSER}](tg://user?id={mafia}) ⚡")
     
