@@ -7,7 +7,7 @@ from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
 
-@bot.on(admin_cmd("zip"))
+@borg.on(admin_cmd("zip"))
 async def _(event):
     if event.fwd_from:
         return
