@@ -35,7 +35,7 @@ edit_time = 30
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 file2 = "https://telegra.ph/file/a12fa182ccac24b2bb9a5.jpg"
-file2 = "https://telegra.ph/file/581e32d5dae4c05d82fa1.jpg"
+file3 = "https://telegra.ph/file/581e32d5dae4c05d82fa1.jpg"
 file4 = "https://telegra.ph/file/b39d4a5cb3f4ae080924b.jpg"
 """ =======================CONSTANTS====================== """
 
