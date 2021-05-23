@@ -14,7 +14,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp
 
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝕄𝔸𝔽𝕀𝔸𝔹𝕆𝕋"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "SAVAGE BOT"
 
 # Thanks to Sipak bro and Raganork.. 
 # animation Idea by @NOOB_GUY_OP (Sipakisking)
@@ -31,7 +31,7 @@ else:
 
 mafia = bot.uid
 
-edit_time = 4
+edit_time = 30
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 file2 = "https://telegra.ph/file/a12fa182ccac24b2bb9a5.jpg"
