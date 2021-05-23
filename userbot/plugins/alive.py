@@ -20,7 +20,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "𝕄𝔸𝔽𝕀𝔸𝔹𝕆�
 # animation Idea by @NOOB_GUY_OP (Sipakisking)
 # Made by @ROMANTIC_KILLER...and thanks to @Crackexy for the logos...
 # Kang with credits else gay...
-# alive.py for ÂÝŮ$HópBØȚ
+
 
 ludosudo = Config.SUDO_USERS
 
@@ -31,7 +31,7 @@ else:
 
 mafia = bot.uid
 
-edit_time = 16
+edit_time = 8
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 file2 = "https://telegra.ph/file/a12fa182ccac24b2bb9a5.jpg"
