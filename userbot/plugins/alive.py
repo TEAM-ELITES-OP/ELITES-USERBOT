@@ -31,7 +31,7 @@ else:
 
 mafia = bot.uid
 
-edit_time = 30
+edit_time = 5
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 file2 = "https://telegra.ph/file/a12fa182ccac24b2bb9a5.jpg"
