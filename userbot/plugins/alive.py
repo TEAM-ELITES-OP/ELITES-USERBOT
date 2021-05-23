@@ -31,7 +31,7 @@ else:
 
 mafia = bot.uid
 
-edit_time = 8
+edit_time = 4
 """ =======================CONSTANTS====================== """
 file1 = "https://telegra.ph/file/f3a82860656f0263bc8aa.jpg"
 file2 = "https://telegra.ph/file/a12fa182ccac24b2bb9a5.jpg"
@@ -110,5 +110,5 @@ async def amireallyalive(alive):
 CmdHelp("alive").add_command(
   "alive", None, "To check am i alive"
 ).add_command(
-  "mafia", None, "To check am i alive with your favorite alive pic"
+  "savage", None, "To check am i alive with your favorite alive pic"
 ).add()
