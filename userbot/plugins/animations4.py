@@ -4,8 +4,8 @@ from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="phub$", outgoing=True))
-@bot.on(sudo_cmd(pattern="phub$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="pornhub$", outgoing=True))
+@bot.on(sudo_cmd(pattern="pornhub$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -68,7 +68,8 @@ async def _(event):
 
 
 
-@borg.on(lightning_cmd(pattern=r"lul$"))
+@bot.on(admin_cmd(pattern=r"lul$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"lul$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
