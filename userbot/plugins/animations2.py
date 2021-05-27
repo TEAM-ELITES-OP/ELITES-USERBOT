@@ -43,7 +43,7 @@ async def _(event):
     animation_ttl = range(12)
     event = await edit_or_reply(event, "`Deploying...`")
     animation_chars = [
-        "**Heroku Connecting To Latest [Github Build](H1M4N5HU0P/MAFIA-BOT)**",
+        "**Heroku Connecting To Latest [Github Build](sameerpanthi/SAVAGE-BOT-2.0)**",
         f"**Build started by user** {DEFAULTUSER}",
         f"**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
         "**Restarting Heroku Server...**",
@@ -52,8 +52,8 @@ async def _(event):
         "**Process exited with** `status 143`",
         "**Starting process with command** `python3 -m stdborg`",
         "**State changed from starting to up**",
-        "__INFO:MafiaBot:Logged in as 557667062__",
-        "__INFO:MafiaBot:Successfully loaded all plugins__",
+        "__INFO:savagebot:Logged in as 557667062__",
+        "__INFO:savagebot:Successfully loaded all plugins__",
         "**Build Succeeded**",
     ]
     for i in animation_ttl:
