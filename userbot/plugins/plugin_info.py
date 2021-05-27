@@ -10,8 +10,8 @@ from mafiabot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern=r"plinfo(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern=r"plinfo(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"help(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"help(?: |$)(.*)", allow_sudo=True))
 async def info(event):
     """ For .plinfo command,"""
     args = event.pattern_match.group(1).lower()
@@ -22,7 +22,7 @@ async def info(event):
             await edit_or_reply(event, "Please specify a valid plugin name.")
     else:
         await edit_or_reply(event, "Please specify which plugin do you want help for !!\
-            \nUsage: .plinfo <plugin name>"
+            \nUsage: .help <plugin name>"
         )
         string = ""
         for i in CmdHelp:
@@ -31,5 +31,5 @@ async def info(event):
         await event.reply(string)
 
 CmdHelp("plugin_info").add_command(
-  "plinfo", "<plugin name>", "Gives the info triggered plugin. Every Commands with its usage and how to use.."
+  "help", "<plugin name>", "Gives the info triggered plugin. Every Commands with its usage and how to use.."
 ).add()
