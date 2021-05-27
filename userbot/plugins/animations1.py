@@ -16,7 +16,7 @@ async def _(event):
         return
     animation_interval = 0.1
     animation_ttl = range(0, 36)
-    await edit_or_reply(event, "mafiao")
+    await edit_or_reply(event, "savage")
     animation_chars = [
         "Indian Flag",
         "**🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n\n                🧡🤍💚\n\nProud To Be An Indian❣️!!**",
@@ -83,8 +83,8 @@ async def _(event):
             "**😈YOU KNOW THAT I'M A GOOD PERSON. BUT DON'T GIVE ME REASON TO SHOW MY EVIL SIDE😈**"
         )
         
-@bot.on(admin_cmd(pattern="gnt$", outgoing=True))
-@bot.on(sudo_cmd(pattern="gnt$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gn$", outgoing=True))
+@bot.on(sudo_cmd(pattern="gn$", allow_sudo=True))
 async def gn(event):
     if event.fwd_from:
         return
@@ -92,8 +92,8 @@ async def gn(event):
     )
 
 
-@bot.on(admin_cmd(pattern="gmg$", outgoing=True))
-@bot.on(sudo_cmd(pattern="gmg$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gm$", outgoing=True))
+@bot.on(sudo_cmd(pattern="gm$", allow_sudo=True))
 async def gm(event):
     if event.fwd_from:
         return
