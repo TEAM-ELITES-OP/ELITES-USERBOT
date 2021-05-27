@@ -166,8 +166,8 @@ async def test(event):
     )
 
 
-@bot.on(admin_cmd(pattern=r"hii", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"hii", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"hi", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"hi", allow_sudo=True))
 async def hi(event):
     if event.fwd_from:
         return
