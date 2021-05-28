@@ -257,6 +257,19 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 15])
 
+
+@bot.on(admin_cmd(pattern=r"lul$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"lul$", allow_sudo=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    deq = deque(list("😂🤣😂🤣😂🤣"))
+    for _ in range(48):
+        await asyncio.sleep(0.1)
+        await event.edit("".join(deq))
+        deq.rotate(1)
+
+
 @bot.on(admin_cmd(pattern=r"jio$", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
 async def _(event):
