@@ -101,7 +101,7 @@ async def kang(args):
 
         packname = f"{user.username}'s_{pack}"
         packnick = (
-            f"Vol.{pack}"
+            f"{user.username}'s_{pack}" 
             if mafiabot
             else f"@{user.username}'s {pack}"
         )
