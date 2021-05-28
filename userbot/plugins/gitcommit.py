@@ -25,7 +25,7 @@ async def download(event):
         await edit_or_reply(event, "`Please ADD Proper Access Token from github.com`")
         return
     if Var.GIT_REPO_NAME is None:
-        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of mafiaBot`")
+        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of savageBot`")
         return
     mafiabot = await edit_or_reply(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
