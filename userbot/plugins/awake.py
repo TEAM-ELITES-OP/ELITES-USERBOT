@@ -69,7 +69,6 @@ async def amireallyalive(alive):
         mafia_caption += f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  : `1.15.0`\n\n"
         mafia_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{mafiaversion}`\n\n"
         mafia_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 : {mention}\n\n"
-        mafia_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 𝙸𝙳 : <code>{}</code> \n\n"
         mafia_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
         mafia_caption += f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
 
@@ -86,7 +85,6 @@ async def amireallyalive(alive):
             f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  :** `1.15.0`\n\n"
             f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{mafiaversion}`\n\n"
             f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 :** {mention}\n\n"
-            f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 𝙸𝙳 : <code>{}</code> \n\n"
             f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
             f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
         )
