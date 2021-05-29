@@ -48,7 +48,7 @@ pm_caption += f"               __↼𝙼𝙰𝚂𝚃𝙴𝚁 ⇀__\n**      『{
 pm_caption += "𖣘 𝙰𝙱𝙾𝚄𝚃 𝙼𝚈 𝚂𝚈𝚂𝚃𝙴𝙼 𖣘\n\n"
 
 
-pm_caption += "☞︎︎︎ 𝚃𝙷𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 1.19.5\n"
+pm_caption += "➾ 𝚃𝙷𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 1.19.5\n"
 pm_caption += "➾ 𝚃𝙴𝙰𝙼 𝙶𝚁𝙾𝚄𝙿  ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/RPrJW2IU-Uo4MGRl)\n"
 pm_caption += "➾ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙽𝙽𝙴𝙻 ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/0KCyT0MHyAhmMmRl)\n"
 pm_caption += "➾ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/qCIk-af6VW1kNDll)\n"
