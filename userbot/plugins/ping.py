@@ -64,12 +64,8 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    event = await edit_or_reply(event, "__**(❛ ᑭσɳց ❜!__**")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    await eor(event,
-        f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** `{ALIVE_NAME}`"
-    )
+    event = await edit_or_reply(event, "**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** `{ALIVE_NAME}`")
+    
 
     
 @bot.on(admin_cmd(pattern="ting$"))
