@@ -82,5 +82,5 @@ async def amireallyalive(alive):
             f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{mafiaversion}`\n"
             f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 :** {mention}\n"
             f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n"
-        await alive.client.send_file(
+        
         )
