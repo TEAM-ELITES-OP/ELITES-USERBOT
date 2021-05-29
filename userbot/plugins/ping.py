@@ -64,7 +64,7 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    event = await edit_or_reply(event, "**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** {mention}")
+    event = await edit_or_reply(event, "**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
     
 
     
