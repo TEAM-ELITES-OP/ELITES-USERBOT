@@ -39,17 +39,17 @@ file3 = "https://telegra.ph/file/581e32d5dae4c05d82fa1.jpg"
 file4 = "https://telegra.ph/file/b39d4a5cb3f4ae080924b.jpg"
 """ =======================CONSTANTS====================== """
 
-pm_caption = "__                       **😎🔥 𝐒𝐀𝐕𝐀𝐆𝐄 2.0 😎🔥**  __\n\n"
-pm_caption += f"               __↼🄼🄰🅂🅃🄴🅁⇀__\n**      『{DEFAULTUSER}』**\n\n"
-pm_caption += "✘ ΔβØỮŦ Μ¥ Ş¥ŞŦ€Μ ✘\n\n"
-pm_caption += "➾ 𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍         ➣ 𝟏.𝟏𝟕.𝟓\n"
-pm_caption += "➾ 𝐓𝐄𝐀𝐌 𝐆𝐑𝐎𝐔𝐏      ➣ [𝐒𝐀𝐕𝐀𝐆𝐄](https://t.me/joinchat/RPrJW2IU-Uo4MGRl)\n"
-pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐂𝐇𝐍𝐍𝐋 ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/0KCyT0MHyAhmMmRl)\n"
-pm_caption += "➾ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐎𝐔𝐏 ➣ [𝐉𝐎𝐈𝐍](https://t.me/joinchat/qCIk-af6VW1kNDll)\n"
-pm_caption += "➾ 𝐂𝐑𝐄𝐀𝐓𝐎𝐑     ➣ [⚡𝐒𝐀𝐌𝐄𝐄𝐑⚡](@SAMEER_795)\n" 
+pm_caption = "_🔥 𝚂𝙰𝚅𝙰𝙶𝙴 𝙱𝙾𝚃 𝙸𝚂 𝙾𝙽 𝙵𝙸𝚁𝙴 🔥_\n\n"
+pm_caption += f"               __↼𝙼𝙰𝚂𝚃𝙴𝚁 ⇀__\n**      『{DEFAULTUSER}』**\n\n"
+pm_caption += "𖣘 𝙰𝙱𝙾𝚄𝚃 𝙼𝚈 𝚂𝚈𝚂𝚃𝙴𝙼 𖣘\n\n"
+pm_caption += "☞︎︎︎ 𝚃𝙷𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : 1.19.5\n"
+pm_caption += "➾ 𝚃𝙴𝙰𝙼 𝙶𝚁𝙾𝚄𝙿  ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/RPrJW2IU-Uo4MGRl)\n"
+pm_caption += "➾ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙽𝙽𝙴𝙻 ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/0KCyT0MHyAhmMmRl)\n"
+pm_caption += "➾ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿 ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/qCIk-af6VW1kNDll)\n"
+pm_caption += "➾ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁    ➣ [⚡𝚂𝙰𝙼𝙴𝙴𝚁⚡](@SAMEER_795)\n" 
                   
 pm_caption += " \n"
-pm_caption += "[✨𝑫𝑬𝑷𝑳𝑶𝒀 𝒀𝑶𝑼𝑹 𝑺𝑨𝑽𝑨𝑮𝑬 2.0✨](https://github.com/sameerpanthi/SAVAGE-2.0-BOT)"
+pm_caption += "[✨𝙳𝙴𝙿𝙻𝙾𝚈 𝚈𝙾𝚄𝚁 𝙾𝚆𝙽 𝚂𝙰𝚅𝙰𝙶𝙴 𝙱𝙾𝚃✨](https://github.com/sameerpanthi/SAVAGE-2.0-BOT)"
 
 
 # @command(outgoing=True, pattern="^.alive$")
