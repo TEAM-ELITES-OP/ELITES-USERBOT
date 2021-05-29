@@ -94,5 +94,3 @@ CmdHelp("ping").add_command(
 ).add_command(
   "hbping", None, "Shows you the ping speed of server with an animation"
 ).add()
-  "Tinf", None, "Shows you the ping speed of server with extra animation"
-).add()
