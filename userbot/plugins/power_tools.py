@@ -10,38 +10,23 @@ import sys
 import asyncio
 from os import execl
 from time import sleep
+
 from mafiabot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot import HEROKU_APP, bot
-from telethon import events, Button, custom
-import os,re
-from telethon.tl.custom import Button 
-from telethon import events, errors, custom, functions
 
-@tgbot.on(events.InlineQuery(pattern=r"restart"))
-async def inline_id_handler(event: events.InlineQuery.Event):
- LEGEND = event.builder
- X = [[custom.Button.inline("⁂⁂ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭 ⁂⁂",data="restart")]] #RESTART
- query = event.text #PROBOYX 
- result = mafiabot.article("SAVAGE",text="**Cʟɪᴄᴋ Rᴇsᴛᴀʀᴛ Tᴏ Rᴇsᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ**",buttons=X,link_preview=False)
- await event.answer([result]) #SAMEER
-
-from telethon import Button, custom, events
-import os, re, sys, asyncio
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) #SAMEER
-async def restart(event):
-  if event.sender_id == bot.me.id or event.sender_id == ID:
-    await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ Bᴏᴛ\nPʟᴇᴀsᴇ ᴡᴀɪᴛ**")
-    await asyncio.sleep(2)
-    await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ ᴛʜᴇ Hᴇʀᴏᴋᴜ Cᴏɴɴᴇᴄᴛɪᴏɴ.....**")
-    await asyncio.sleep(1)
-    await event.edit("**Rᴇsᴛᴀʀᴛᴇᴅ ʏᴏᴜʀ ʙᴏᴛ sᴜᴄᴄᴇssғᴜʟʟʏ**\n✅✅")
+@bot.on(admin_cmd(pattern="restart"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.edit("Restarting **[ ░░░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
+    await event.edit("Restarting **[ █░░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
+    await event.edit("Restarting **[ ██░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
+    await event.edit("Restarting **[ ███ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
+    await event.edit("Restarted **[ ✓ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
+    await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
-    quit ()#OP
-  else:
-    pro = "Eeh, go and get your own SAVAGE BOT you noob kiddo"
-    await event.answer(pro, alert=True)
-
+    quit()
 
 @bot.on(admin_cmd(pattern="shutdown$"))
 async def _(event):
