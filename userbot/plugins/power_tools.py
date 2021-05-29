@@ -23,12 +23,12 @@ async def inline_id_handler(event: events.InlineQuery.Event):
  LEGEND = event.builder
  X = [[custom.Button.inline("⁂⁂ 𝐑𝐞𝐬𝐭𝐚𝐫𝐭 ⁂⁂",data="restart")]] #RESTART
  query = event.text #PROBOYX 
- result = LEGEND.article("LEGEND",text="**Cʟɪᴄᴋ Rᴇsᴛᴀʀᴛ Tᴏ Rᴇsᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ**",buttons=X,link_preview=False)
- await event.answer([result]) #LEGENDX
+ result = mafiabot.article("SAVAGE",text="**Cʟɪᴄᴋ Rᴇsᴛᴀʀᴛ Tᴏ Rᴇsᴛᴀʀᴛ Yᴏᴜʀ Bᴏᴛ**",buttons=X,link_preview=False)
+ await event.answer([result]) #SAMEER
 
 from telethon import Button, custom, events
 import os, re, sys, asyncio
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) # PROBOYX
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b'restart'))) #SAMEER
 async def restart(event):
   if event.sender_id == bot.me.id or event.sender_id == ID:
     await event.edit("**Rᴇsᴛᴀʀᴛɪɴɢ Bᴏᴛ\nPʟᴇᴀsᴇ ᴡᴀɪᴛ**")
@@ -39,7 +39,7 @@ async def restart(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit ()#OP
   else:
-    pro = "Eeh, go and get your own UltraX you noob kiddo"
+    pro = "Eeh, go and get your own SAVAGE BOT you noob kiddo"
     await event.answer(pro, alert=True)
 
 
