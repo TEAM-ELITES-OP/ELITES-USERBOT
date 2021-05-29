@@ -68,21 +68,6 @@ async def _(event):
     
 
     
-@bot.on(admin_cmd(pattern="ting$"))
-@bot.on(sudo_cmd(pattern="ting$", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    start = datetime.now()
-    event = await edit_or_reply(event, "<i><b>☞ Tong!</b></i>", "html")
-    end = datetime.now()
-    ALIVE_NAME = DEFAULTUSER
-    TG_BOT_USERNAME = Config.TG_BOT_USER_NAME_BF_HER
-    ms = (end - start).microseconds / 1000
-    await eor(event,
-        f"<i><b>☞ Tong !!</b></i>\n➥ {ms} ms\n➥ <i><b>Bot of: {ALIVE_NAME}</b></i>\n➥ <i><b>Assistant: {TG_BOT_USERNAME}</b></i>",
-        parse_mode="html",
-    )
 
 
 CmdHelp("ping").add_command(
