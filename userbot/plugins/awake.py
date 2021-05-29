@@ -64,10 +64,13 @@ async def amireallyalive(alive):
         mafia_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         mafia_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         mafia_caption += f"__𖣘 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 𖣘__\n\n"
-        mafia_caption += f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  :** `1.15.0`\n"
-        mafia_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{mafiaversion}`\n"
-        mafia_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 :** {mention}\n"
-        mafia_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n"
+        mafia_caption += f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  : `1.15.0`\n\n"
+        mafia_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{mafiaversion}`\n\n"
+        mafia_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 : {mention}\n\n"
+        mafia_caption += f"✰ MY BOSS ID : <code>{}</code> \n\n"
+        mafia_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
+        mafia_caption += f"✰ uptime : `{uptime}\n`"
+
         await alive.client.send_file(
             alive.chat_id, MAFIA_IMG, caption=mafia_caption, reply_to=reply_to_id
         )
