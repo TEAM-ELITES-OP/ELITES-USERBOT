@@ -64,9 +64,16 @@ async def _(event):
     if event.fwd_from:
         return
     start = datetime.now()
-    event = await edit_or_reply(event, "**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+    event = await edit_or_reply(event, "__**(❛ ᑭσɳց ❜!__**")
+    end = datetime.now()
+    ms = (end - start).microseconds / 1000
+    await event.edit(
+        f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n✥ **✪ Mᴀsᴛᴇʀ:** [{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+    )
     
 
-    
-
-
+CmdHelp("ping").add_command(
+  "ping", None, "Shows you the ping speed of server"
+).add_command(
+  "hbping", None, "Shows you the ping speed of server with an animation"
+).add()
