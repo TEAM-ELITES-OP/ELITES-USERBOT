@@ -33,7 +33,6 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-
 @bot.on(admin_cmd(pattern=r"deploy$", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
 async def _(event):
@@ -59,6 +58,27 @@ async def _(event):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 12])
+
+
+
+@bot.on(admin_cmd(pattern=r"ppromote$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"ppromote$", allow_sudo=True))
+async def _(event):
+    if event.fwd_from:
+        return
+    animation_interval = 3
+    animation_ttl = range(12)
+    event = await edit_or_reply(event, "𝗣𝗥𝗢𝗠𝗢𝗧𝗜𝗡𝗚..")
+    animation_chars = [
+        "𝗛𝗡 𝗞𝗥 𝗥𝗛𝗔 𝗛𝗨 𝗣𝗥𝗢𝗠𝗢𝗧𝗘 𝗥𝗨𝗞𝗝𝗔",
+        f"𝗕𝗦𝗦 𝗛𝗢 𝗛𝗜 𝗚𝗔𝗬𝗔",
+        f"promoted successfully🥳🥳 now gib party bisi 🥳❤️😍",
+        
+    ]
+    for i in animation_ttl:
+        await asyncio.sleep(animation_interval)
+        await event.edit(animation_chars[i % 12])
+
 
 
 @bot.on(admin_cmd(pattern=r"dump$", outgoing=True))
