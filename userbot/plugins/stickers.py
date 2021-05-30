@@ -98,9 +98,12 @@ async def kang(args):
                 # User sent just custom emote, wants to push to default
                 # pack
                 emoji = splat[1]
-                packname = f"{user.username}_{pack}"
-                packnick = f"@{user.username}'s_{pack}"
-        
+                  packname = f"HB_{user.username}_by_{user.username}_{pack}"
+                    packnick = (
+                        f"{user.username}_{pack}"
+                        if mafiabot
+                        else f"@{user.username}'s_{pack}"
+                    )
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -131,9 +134,12 @@ async def kang(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"{user.username}_{pack}"
-                    packnick = f"@{user.username}'s_{pack}"
-                    
+                      packname = f"HB_{user.username}_by_{user.username}_{pack}"
+                    packnick = (
+                        f"{user.username}_{pack}"
+                        if mafiabot
+                        else f"@{user.username}'s_{pack}"
+                    )
                     await args.edit(
                         "`Switching to Pack "
                         + str(pack)
