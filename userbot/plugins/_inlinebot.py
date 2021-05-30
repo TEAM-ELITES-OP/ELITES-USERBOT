@@ -34,8 +34,8 @@ mafia_emoji = Config.EMOJI_IN_HELP
 # MafiaBot
 
 def button(page, modules):
-    Row = 3
-    Column = 6
+    Row = 6
+    Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::2], modules[1::2])))
