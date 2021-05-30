@@ -66,12 +66,12 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.mafiabot = bot
+        mod.SAVAGE = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_mafia = delete_mafia
+        mod.delete_SAVAGE = delete_SAVAGE
         mod.media_type = media_type
-        # support for mafiabot originals
-        sys.modules["mafiabot.utils"] = userbot.utils
+        # support for SAVAGE originals
+        sys.modules["SAVAGE.utils"] = userbot.utils
         sys.modules["mafiabot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
@@ -290,13 +290,13 @@ async def edit_or_reply(
     await event.delete()
     os.remove(file_name)
 
-async def delete_mafia(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_SAVAGE(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        mafiaevent = (
+        SAVAGEevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
@@ -304,7 +304,7 @@ async def delete_mafia(event, text, time=None, parse_mode=None, link_preview=Non
             )
         )
     else:
-        mafiaevent = await event.edit(
+        SAVAGEevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
