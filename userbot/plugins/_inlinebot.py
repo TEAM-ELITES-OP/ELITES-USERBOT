@@ -25,13 +25,13 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from mafiabot.utils import *
+from SAVAGE.utils import *
 from userbot.Config import Config
 
 mafia_row = Config.BUTTONS_IN_HELP
 mafia_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
-# MafiaBot
+# SAVAGE
 
 def button(page, modules):
     Row = 6
