@@ -34,8 +34,8 @@ mafia_emoji = Config.EMOJI_IN_HELP
 # MafiaBot
 
 def button(page, modules):
-    Row = mafia_row
-    Column = 3
+    Row = 3
+    Column = 6
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::2], modules[1::2])))
@@ -55,7 +55,7 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"☜︎︎︎ 𝙿𝚁𝙴𝚅𝙸𝙾𝚄𝚂༆ {mafia_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"☜︎︎︎ 𝙱𝙰𝙲𝙺༆", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
                f"༒︎ 𝙲𝙻𝙾𝚂𝙴 ༒︎", data="close"
