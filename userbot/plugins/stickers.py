@@ -135,11 +135,11 @@ async def kang(args):
                 x = await conv.get_response()
                 while "120" in x.text:
                     pack += 1
-                    packname = f"HB_{user.username}_by_{user.username}_{pack}"
+                    packname = f"HB_{user.username}__{pack}"
                     packnick = (
-                        f"_{user.username}__{pack}"
-                        if mafiabot
-                        else f"@{user.username}'s_{pack}"
+                    f"_{user.username}__{pack}"
+                   if mafiabot
+                   else f"@{user.username}'s_{pack}"
                     )
                     await args.edit(
                         "`Switching to Pack "
