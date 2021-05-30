@@ -38,7 +38,7 @@ def button(page, modules):
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
-    pairs = list(map(list, zip(modules[::2], modules[1::2])))
+    pairs = list(map(list, zip(modules[::3], modules[1::3])))
     if len(modules) % 2 == 1:
         pairs.append([modules[-1]])
     max_pages = ceil(len(pairs) / Row)
