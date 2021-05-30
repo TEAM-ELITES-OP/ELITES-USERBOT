@@ -640,7 +640,7 @@ async def unsavegif(event, h1m4n5hu0p):
         await event.client(
             functions.messages.SaveGifRequest(
                 id=types.InputDocument(
-                    id=h1m4n5hu0p.media.document.id,
+                    id=sameerpanthi.media.document.id,
                     access_hash=h1m4n5hu0p.media.document.access_hash,
                     file_reference=h1m4n5hu0p.media.document.file_reference,
                 ),
