@@ -137,7 +137,7 @@ def generate_change_log(git_repo, diff_marker):
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "Uᴘᴅᴀᴛᴇᴅ Yᴏᴜʀ 𝐒𝐀𝐕𝐀𝐆𝐄 2.0 Bᴏᴛ Is Sᴜᴄᴄᴇssғᴜʟʟʏ. Aғᴛᴇʀ 5-7 Mɪɴᴜᴛᴇs Tʏᴘᴇ (.ping or .alive) Tᴏ Cʜᴇᴄᴋ I ᴀᴍ Aʟɪᴠᴇ Oʀ ɴᴏᴛ🚶😏"
+        "WANT TO UPDATE YOUR BOT ?THEN USE  .restart  ONLY, DUE TO SOME BUG WITH .update👍😕..in short use .restart not .update"
     )
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
