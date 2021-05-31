@@ -34,8 +34,8 @@ mafia_emoji = Config.EMOJI_IN_HELP
 # SAVAGE
 
 def button(page, modules):
-    Row = 6
-    Column = 3
+    Row = 5
+    Column = 5
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
     pairs = list(map(list, zip(modules[::3], modules[1::3])))
