@@ -94,7 +94,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         elif event.text=='':
             result = builder.article(
-                "@MafiaBot_Support",
+                "@savage_Support",
                 text="""**Hᴇʏ TʜɪS Is [𝐒𝐀𝐕𝐀𝐆𝐄 2.0](https://t.me/SAVAGE_USERBOT) \nYᴏᴜ Cᴀɴ Kɴᴏᴡ Mᴏʀᴇ AʙOᴜᴛ Mᴇ Fʀᴏᴍ LɪɴᴋS Gɪᴠᴇɴ Bᴇʟᴏᴡ 👇**""",
                 buttons=[
                     [
