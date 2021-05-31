@@ -28,8 +28,8 @@ from userbot.cmdhelp import *
 from mafiabot.utils import *
 from userbot.Config import Config
 
-mafia_row = Config.BUTTONS_IN_HELP
-mafia_emoji = Config.EMOJI_IN_HELP
+mafia_row = 5
+mafia_emoji = 5
 # thats how a lazy guy imports
 # SAVAGE
 
@@ -80,7 +80,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**Rᴜɴɴɪɴɢ 𝐒𝐀𝐕𝐀𝐆𝐄 2.0**\n\n__Nᴜᴍʙᴇʀ Oғ Pʟᴜɢɢɪɴs Iɴsᴛᴀʟʟᴇᴅ__ :`{len(CMD_HELP)}`\n**Pᴀɢᴇ:** 1/{veriler[0]}",
+                text=f"**𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝚂𝙰𝚅𝙰𝙶𝙴 2.0**\n\n__𝙽𝚄𝙼𝙱𝙴𝚁 𝙾𝙵 𝙿𝙻𝚄𝙶𝙶𝙸𝙽𝚂 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙴𝙳__ :`{len(CMD_HELP)}`\n**𝙿𝙰𝙶𝙴:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
