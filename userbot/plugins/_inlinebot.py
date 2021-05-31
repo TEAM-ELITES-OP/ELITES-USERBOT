@@ -95,20 +95,20 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.text=='':
             result = builder.article(
                 "@savage_Support",
-                text="""**Hᴇʏ TʜɪS Is [𝐒𝐀𝐕𝐀𝐆𝐄 2.0](https://t.me/SAVAGE_USERBOT) \nYᴏᴜ Cᴀɴ Kɴᴏᴡ Mᴏʀᴇ AʙOᴜᴛ Mᴇ Fʀᴏᴍ LɪɴᴋS Gɪᴠᴇɴ Bᴇʟᴏᴡ 👇**""",
+                text="""🔥 𝖲𝙰𝚅𝙰𝙶𝙴'𝚜 𝚁𝙴𝙿𝙾 , 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 , 𝚂𝚃𝚁𝙸𝙽𝙶 , 𝙰𝙱𝙾𝚄𝚃 𝙱𝙾𝚃 👇🔥\n [𝖲𝙰𝚅𝙰𝙶e](t.me/savage_userbot)™""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CʜᴀNɴᴇʟ 🔥", "https://t.me/SAVAGE_TECHY"),
+                        custom.Button.url("🔗 𝖲𝚃𝚁𝙸𝙽𝙶  🔗", "https://replit.com/@sameerpanthi/SAVAGE-BOT#main.py"),
                         custom.Button.url(
-                            "⚡ GʀᴏᴜP ⚡", "https://t.me/sᴀᴠᴀɢᴇ_ᴜsᴇʀʙᴏᴛ"
+                            "💫 𝖲𝚄𝙿𝙿𝙾𝚁𝚃 💫", "https://t.me/sᴀᴠᴀɢᴇ_ᴜsᴇʀʙᴏᴛ"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ Rᴇᴘᴏ ✨", "https://github.com/sameerpanthi/SAVAGE-2.0-BOT"),
+                            "⚜ 𝖱𝙴𝙿𝙾 ⚜", "https://github.com/sameerpanthi/SAVAGE-2.0-BOT"),
                         custom.Button.url
                     (
-                            "🔰 Cʀᴇᴀᴛᴏʀ 🔰", "https://t.me/SAMEER_795"
+                            "👑 𝖠𝙱𝙾𝚄𝚃 𝖡𝙾𝚃 👑", "https://t.me/joinchat/p6IwtKP0l844YTY1"
                     )
                     ],
                 ],
