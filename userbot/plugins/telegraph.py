@@ -89,7 +89,7 @@ def resize_image(image):
     
 CmdHelp("telegraph").add_command(
     {
-        "telegraph": ".t(m/t)"
+        "telegraph": ".tm"
         "\nUsage .tm Give Telegraph Link of media nd .tt telegraph link of text ."
     }
 )
