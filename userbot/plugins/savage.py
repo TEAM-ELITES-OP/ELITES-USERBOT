@@ -1,8 +1,19 @@
 # COPYRIGHT (C) 2021-22 BY LEGENDX22
 from telethon import events, Button, custom
 from telethon import events, Button, custom
-from mafiabot import bot
-from userbot import xbot, BOT
+
+from math import ceil
+from re import compile
+import asyncio
+
+from telethon.events import InlineQuery, callbackquery
+from telethon.sync import custom
+from telethon.tl.functions.channels import JoinChannelRequest
+
+from userbot import *
+from userbot.cmdhelp import *
+from mafiabot.utils import *
+from userbot.Config import Config
 import os,re
 from telethon.tl.custom import Button 
 from telethon import events, errors, custom, functions
