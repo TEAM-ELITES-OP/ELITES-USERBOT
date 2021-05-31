@@ -67,7 +67,7 @@ def button(page, modules):
     )
     return [max_pages, buttons]
     # Changing this line may give error in bot as i added some special cmds in savage channel to get this module work...
-
+                
     modules = CMD_HELP
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(InlineQuery)  # pylint:disable=E0602
@@ -80,7 +80,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝚂𝙰𝚅𝙰𝙶𝙴 2.0**\n\n__𝙽𝚄𝙼𝙱𝙴𝚁 𝙾𝙵 𝙿𝙻𝚄𝙶𝙶𝙸𝙽𝚂 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙴𝙳__:`{len(CMD_HELP)}`\n**𝙿𝙰𝙶𝙴:** 1/{veriler[0]}",
+                text=f"**𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝚂𝙰𝚅𝙰𝙶𝙴 2.0**\n\n__𝙽𝙾. 𝙾𝙵 𝙿𝙻𝚄𝙶𝙶𝙸𝙽𝚂 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙴𝙳__ :`{len(CMD_HELP)}`\n**𝙿𝙰𝙶𝙴:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
             )
