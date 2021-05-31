@@ -88,8 +88,7 @@ def resize_image(image):
 
     
 CmdHelp("telegraph").add_command(
-    {
-        "telegraph": ".tm"
-        "\nUsage .tm Give Telegraph Link of media nd .tt telegraph link of text ."
-    }
-)
+  "tt", "<reply to text message>", "Uploads the replied text message to telegraph making a short telegraph link"
+).add_command(
+  "tm", "<reply to media>", "Uploads the replied media (sticker/ gif/ video/ image) to telegraph and gives a short telegraph link"
+).add()
