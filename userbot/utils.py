@@ -119,8 +119,7 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST[file_test].append(cmd)
             except BaseException:
                 CMD_LIST.update({file_test: [cmd]})
-
-else:
+        else:
             if len(Config.COMMAND_HAND_LER) == 2:
                 mafiareg = "^" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER[1]
@@ -215,8 +214,7 @@ def sudo_cmd(pattern=None, command=None, **args):
         args["outgoing"] = True
     # add blacklist chats, UB should not respond in these chats
     args["blacklist_chats"] = True
-
-black_list_chats = list(Config.UB_BLACK_LIST_CHAT)
+    black_list_chats = list(Config.UB_BLACK_LIST_CHAT)
     if black_list_chats:
         args["chats"] = black_list_chats
     # add blacklist chats, UB should not respond in these chats
@@ -334,7 +332,7 @@ def errors_handler(func):
             await func(errors)
         except BaseException:
 
-date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+            date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             new = {
                 'error': str(sys.exc_info()[1]),
                 'date': datetime.datetime.now()
@@ -406,7 +404,7 @@ async def progress(
         )
         if file_name:
             await event.edit(
-                "{}\nFile Name: {}\n{}".format(type_of_ps, file_name, tmp)
+                "{}\nFile Name: `{}`\n{}".format(type_of_ps, file_name, tmp)
             )
         else:
             await event.edit("{}\n{}".format(type_of_ps, tmp))
@@ -418,8 +416,8 @@ def humanbytes(size):
     # https://stackoverflow.com/a/49361727/4723940
     if not size:
         return ""
-    # 2  10 = 1024
-    power = 2  10
+    # 2 ** 10 = 1024
+    power = 2 ** 10
     raised_to_pow = 0
     dict_power_n = {0: "", 1: "Ki", 2: "Mi", 3: "Gi", 4: "Ti"}
     while size > power:
@@ -430,12 +428,12 @@ def humanbytes(size):
 
 def human_to_bytes(size: str) -> int:
     units = {
-        "M": 2  20,
-        "MB": 2  20,
-        "G": 2  30,
-        "GB": 2  30,
-        "T": 2  40,
-        "TB": 2  40,
+        "M": 2 ** 20,
+        "MB": 2 ** 20,
+        "G": 2 ** 30,
+        "GB": 2 ** 30,
+        "T": 2 ** 40,
+        "TB": 2 ** 40,
     }
 
     size = size.upper()
@@ -443,6 +441,8 @@ def human_to_bytes(size: str) -> int:
         size = re.sub(r"([KMGT])", r" \1", size)
     number, unit = [string.strip() for string in size.split()]
     return int(float(number) * units[unit])
+
+
 # Inputs time in milliseconds, to get beautified time, as string
 def time_formatter(milliseconds: int) -> str:
     seconds, milliseconds = divmod(int(milliseconds), 1000)
@@ -460,9 +460,9 @@ def time_formatter(milliseconds: int) -> str:
 
 
 class Loader:
-    def init(self, func=None, args):
+    def __init__(self, func=None, **args):
         self.Var = Var
-        bot.add_event_handler(func, events.NewMessage(args))
+        bot.add_event_handler(func, events.NewMessage(**args))
 
 
 # Admin checker by uniborg
@@ -565,7 +565,7 @@ def command(**args):
     except BaseException:
         pass
 
-reg = re.compile("(.*)")
+    reg = re.compile("(.*)")
     if pattern is not None:
         try:
             cmd = re.search(reg, pattern)
@@ -625,9 +625,9 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     )
 
 
-def run_sync(func, *args, kwargs):
+def run_sync(func, *args, **kwargs):
     return asyncio.get_event_loop().run_in_executor(
-        None, functools.partial(func, *args, kwargs)
+        None, functools.partial(func, *args, **kwargs)
     )
 
 
