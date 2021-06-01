@@ -160,6 +160,130 @@ async def promote(promt):
         )
 
 
+@bot.on(admin_cmd("1promote(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@errors_handler
+async def promote(promt):
+    if promt.fwd_from:
+        return
+    chat = await promt.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+    if not admin and not creator:
+        await edit_or_reply(promt, NO_ADMIN)
+        return
+    new_rights = ChatAdminRights(
+        add_admins=False,
+        invite_users=True,
+        change_info=False,
+        ban_users=False,
+        delete_messages=True,
+        pin_messages=True,
+    )
+    mafiaevent = await edit_or_reply(promt, "Promoting...")
+    user, rank = await get_user_from_event(promt)
+    if not rank:
+        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+    if not user:
+        return
+    try:
+        await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
+        await mafiaevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+    except BadRequestError:
+        await mafiaevent.edit(NO_PERM)
+        return
+    if BOTLOG:
+        await promt.client.send_message(
+            BOTLOG_CHATID,
+            "#PROMOTE\n"
+            f"USER: [{user.first_name}](tg://user?id={user.id})\n"
+            f"CHAT: {promt.chat.title}(`{promt.chat_id}`)",
+        )
+
+@bot.on(admin_cmd("2promote(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@errors_handler
+async def promote(promt):
+    if promt.fwd_from:
+        return
+    chat = await promt.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+    if not admin and not creator:
+        await edit_or_reply(promt, NO_ADMIN)
+        return
+    new_rights = ChatAdminRights(
+        add_admins=True,
+        invite_users=True,
+        change_info=True,
+        ban_users=False,
+        delete_messages=True,
+        pin_messages=True,
+    )
+    mafiaevent = await edit_or_reply(promt, "Promoting...")
+    user, rank = await get_user_from_event(promt)
+    if not rank:
+        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+    if not user:
+        return
+    try:
+        await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
+        await mafiaevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+    except BadRequestError:
+        await mafiaevent.edit(NO_PERM)
+        return
+    if BOTLOG:
+        await promt.client.send_message(
+            BOTLOG_CHATID,
+            "#PROMOTE\n"
+            f"USER: [{user.first_name}](tg://user?id={user.id})\n"
+            f"CHAT: {promt.chat.title}(`{promt.chat_id}`)",
+        )
+
+
+@bot.on(admin_cmd("3promote(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@errors_handler
+async def promote(promt):
+    if promt.fwd_from:
+        return
+    chat = await promt.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+    if not admin and not creator:
+        await edit_or_reply(promt, NO_ADMIN)
+        return
+    new_rights = ChatAdminRights(
+        add_admins=True,
+        invite_users=True,
+        change_info=True,
+        ban_users=True,
+        delete_messages=True,
+        pin_messages=True,
+    )
+    mafiaevent = await edit_or_reply(promt, "Promoting...")
+    user, rank = await get_user_from_event(promt)
+    if not rank:
+        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+    if not user:
+        return
+    try:
+        await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
+        await mafiaevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+    except BadRequestError:
+        await mafiaevent.edit(NO_PERM)
+        return
+    if BOTLOG:
+        await promt.client.send_message(
+            BOTLOG_CHATID,
+            "#PROMOTE\n"
+            f"USER: [{user.first_name}](tg://user?id={user.id})\n"
+            f"CHAT: {promt.chat.title}(`{promt.chat_id}`)",
+        )
+
+
+
+
 @bot.on(admin_cmd("demote(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
