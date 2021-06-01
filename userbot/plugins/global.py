@@ -7,7 +7,6 @@ from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                             MessageTooLongError)
 from telethon.tl.functions.channels import (EditAdminRequest,
                                               EditBannedRequest,
-from mafiabot.utils import admin_cmd, sudo_cmd
                                                 EditPhotoRequest)
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.types import (ChannelParticipantsAdmins,
@@ -19,6 +18,8 @@ from mafiabot.utils import register, errors_handler
 from mafiabot.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
+from mafiabot.utils import admin_cmd, sudo_cmd
+
 
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
