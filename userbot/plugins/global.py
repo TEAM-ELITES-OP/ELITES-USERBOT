@@ -7,6 +7,7 @@ from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                             MessageTooLongError)
 from telethon.tl.functions.channels import (EditAdminRequest,
                                               EditBannedRequest,
+from mafiabot.utils import admin_cmd, sudo_cmd
                                                 EditPhotoRequest)
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 from telethon.tl.types import (ChannelParticipantsAdmins,
@@ -48,6 +49,13 @@ async def get_full_user(event):
             return await event.edit("Error... Please report at @RIDERIANS", str(err))           
     return user_obj, extra
 
+ludosudo = Config.SUDO_USERS
+
+if ludosudo:
+    sudou = "True"
+else:
+    sudou = "False"
+
 global hawk,moth
 hawk="admin"
 moth="owner"
@@ -61,6 +69,8 @@ async def get_user_from_id(user, event):
         return None
     return user_obj
 @borg.on(admin_cmd(pattern="gpromote ?(.*)"))
+@bot.on(sudo_cmd(pattern="gpromote$", allow_sudo=True))
+
 async def gben(userbot):
     mb = mafia = userbot
     i = 0
