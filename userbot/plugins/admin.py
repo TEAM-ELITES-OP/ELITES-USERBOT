@@ -136,6 +136,7 @@ async def promote(promt):
         invite_users=True,
         change_info=False,
         ban_users=True,
+        manage_voice_chats=False,
         delete_messages=True,
         pin_messages=True,
     )
