@@ -5,7 +5,7 @@ Available Commands:
 
 import asyncio
 
-from mafiabot.utils import admin_cmd
+from SAVAGEbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd("ok"))

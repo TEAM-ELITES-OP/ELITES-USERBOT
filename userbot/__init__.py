@@ -9,7 +9,7 @@ from var import Var
 
 
 StartTime = time.time()
-mafiaversion = "2.0.4"
+SAVAGEversion = "2.0.4"
 botversion = "0.1"
 
 os.system("pip install aria2p")
@@ -209,5 +209,5 @@ SUDO_LIST = {}
 
 
 from userbot.helpers import *
-from userbot.helpers import functions as mafiadef
+from userbot.helpers import functions as SAVAGEdef
 from userbot.cmdhelp import CmdHelp

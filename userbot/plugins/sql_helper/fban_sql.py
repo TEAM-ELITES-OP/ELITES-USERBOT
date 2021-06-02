@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String
-from mafiabot.plugins.sql_helper import SESSION, BASE
+from SAVAGEbot.plugins.sql_helper import SESSION, BASE
 
 
 class fban(BASE):

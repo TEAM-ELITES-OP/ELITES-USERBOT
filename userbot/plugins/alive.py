@@ -8,8 +8,8 @@
 import asyncio
 import random
 from telethon import events
-from userbot import ALIVE_NAME, mafiaversion
-from mafiabot.utils import admin_cmd, sudo_cmd
+from userbot import ALIVE_NAME, SAVAGEversion
+from SAVAGEbot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp
 
@@ -29,7 +29,7 @@ if ludosudo:
 else:
     sudou = "False"
 
-mafia = bot.uid
+SAVAGE = bot.uid
 
 edit_time = 5
 """ =======================CONSTANTS====================== """

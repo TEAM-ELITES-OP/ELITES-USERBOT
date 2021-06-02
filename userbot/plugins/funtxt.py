@@ -1,6 +1,6 @@
 import nekos
 
-from mafiabot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 
@@ -35,29 +35,29 @@ async def payf(event):
 
 @bot.on(admin_cmd(pattern="cat$"))
 @bot.on(sudo_cmd(pattern="cat$", allow_sudo=True))
-async def hmm(mafia):
-    if mafia.fwd_from:
+async def hmm(SAVAGE):
+    if SAVAGE.fwd_from:
         return
     reactcat = nekos.textcat()
-    await edit_or_reply(mafia, reactcat)
+    await edit_or_reply(SAVAGE, reactcat)
 
 
 @bot.on(admin_cmd(pattern="why$"))
 @bot.on(sudo_cmd(pattern="why$", allow_sudo=True))
-async def hmm(mafia):
-    if mafia.fwd_from:
+async def hmm(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    whymafia = nekos.why()
-    await edit_or_reply(mafia, whymafia)
+    whySAVAGE = nekos.why()
+    await edit_or_reply(SAVAGE, whySAVAGE)
 
 
 @bot.on(admin_cmd(pattern="fact$"))
 @bot.on(sudo_cmd(pattern="fact$", allow_sudo=True))
-async def hmm(mafia):
-    if mafia.fwd_from:
+async def hmm(SAVAGE):
+    if SAVAGE.fwd_from:
         return
-    factmafia = nekos.fact()
-    await edit_or_reply(mafia, factmafia)
+    factSAVAGE = nekos.fact()
+    await edit_or_reply(SAVAGE, factSAVAGE)
 
 
 CmdHelp("funtxts").add_command(

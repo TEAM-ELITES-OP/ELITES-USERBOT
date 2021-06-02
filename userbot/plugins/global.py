@@ -14,11 +14,11 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                    ChatBannedRights,
                                      MessageEntityMentionName,
                                        MessageMediaPhoto)
-from mafiabot.utils import register, errors_handler
-from mafiabot.utils import admin_cmd
+from SAVAGEbot.utils import register, errors_handler
+from SAVAGEbot.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
-from mafiabot.utils import admin_cmd, sudo_cmd
+from SAVAGEbot.utils import admin_cmd, sudo_cmd
 
 
 async def get_full_user(event):  
@@ -73,11 +73,11 @@ async def get_user_from_id(user, event):
 @bot.on(sudo_cmd(pattern="gpromote$", allow_sudo=True))
 
 async def gben(userbot):
-    mb = mafia = userbot
+    mb = SAVAGE = userbot
     i = 0
     sender = await mb.get_sender()
     me = await userbot.client.get_me()
-    await mafia.edit("`promoting...`")
+    await SAVAGE.edit("`promoting...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -91,13 +91,13 @@ async def gben(userbot):
     except:
         pass
     if me == user:
-       k = await mafia.edit("U want to promote urself 😑😑 waao..")
+       k = await SAVAGE.edit("U want to promote urself 😑😑 waao..")
        return
     try:
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await mafia.edit(f"**Something W3NT Wrong 🤔**")
+        return await SAVAGE.edit(f"**Something W3NT Wrong 🤔**")
     if user:
         telchanel = [d.entity.id
                      for d in await userbot.client.get_dialogs()
@@ -113,21 +113,21 @@ async def gben(userbot):
           try:
              await userbot.client(EditAdminRequest(x, user, rgt, rank))
              i += 1
-             await mafia.edit(f"**Promoted in Chats **: `{i}`")
+             await SAVAGE.edit(f"**Promoted in Chats **: `{i}`")
           except:
              pass
     else:
-        await mafia.edit(f"**Reply to a user you dumbo !!**")
-    return await mafia.edit(
+        await SAVAGE.edit(f"**Reply to a user you dumbo !!**")
+    return await SAVAGE.edit(
         f"**Globally promoted [{user.first_name}](tg://user?id={user.id})\n On Chats😏 : {i} **"
     )
 @borg.on(admin_cmd(pattern="gdemote ?(.*)"))
 async def gben(userbot):
-    mb = mafia = userbot
+    mb = SAVAGE = userbot
     i = 0
     sender = await mb.get_sender()
     me = await userbot.client.get_me()
-    await mafia.edit("`demoting...`")
+    await SAVAGE.edit("`demoting...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await userbot.get_chat()
@@ -141,13 +141,13 @@ async def gben(userbot):
     except:
         pass
     if me == user:
-       k = await mafia.edit("U want to demote urself 😑😑 waao..")
+       k = await SAVAGE.edit("U want to demote urself 😑😑 waao..")
        return
     try:
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await mafia.edit(f"**Something W3NT Wrong 🤔**")
+        return await SAVAGE.edit(f"**Something W3NT Wrong 🤔**")
     if user:
         telchanel = [d.entity.id
                      for d in await userbot.client.get_dialogs()
@@ -163,12 +163,12 @@ async def gben(userbot):
           try:
              await userbot.client(EditAdminRequest(x, user, rgt, rank))
              i += 1
-             await mafia.edit(f"**Demoted in Chats **: `{i}`")
+             await SAVAGE.edit(f"**Demoted in Chats **: `{i}`")
           except:
              pass
     else:
-        await mafia.edit(f"**Reply to a user you dumbo !!**")
-    return await mafia.edit(
+        await SAVAGE.edit(f"**Reply to a user you dumbo !!**")
+    return await SAVAGE.edit(
         f"**Globally Demoted [{user.first_name}](tg://user?id={user.id})\n On Chats😏 : {i} **"
     )
 
