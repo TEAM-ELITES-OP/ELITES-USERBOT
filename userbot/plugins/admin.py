@@ -1,7 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
+
 """
 Userbot module to help you manage a group
 """
@@ -31,7 +28,7 @@ from telethon.tl.types import (
 
 from userbot import *
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 # =================== CONSTANT ===================
