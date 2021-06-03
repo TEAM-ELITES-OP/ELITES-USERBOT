@@ -88,7 +88,7 @@ async def gban(userbot):
     except:
         return await elitesbot.edit(f"**Something W3NT Wrong 🤔**")
     if user:
-        if user.id == 1559064347:
+        if user.id == 1801571739:1559064347:1860652088:
             return await elitesbot.edit(
                 f"`First Grow Some Balls To Gban My Creater🤫🚶`"
             )
