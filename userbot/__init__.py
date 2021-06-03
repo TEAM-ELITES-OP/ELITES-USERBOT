@@ -9,7 +9,7 @@ from var import Var
 
 
 StartTime = time.time()
-elitesversion = "2.0.4"
+mafiaversion = "2.0.4"
 botversion = "0.1"
 
 os.system("pip install aria2p")
