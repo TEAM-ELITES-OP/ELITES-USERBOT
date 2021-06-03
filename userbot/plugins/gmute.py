@@ -1,6 +1,6 @@
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from telethon import events
 

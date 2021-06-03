@@ -6,8 +6,8 @@ from typing import Optional, Tuple
 from PIL import Image, ImageDraw, ImageFont
 import PIL.ImageOps
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd
-from userbot import CmdHelp, CMD_HELP, LOGS, bot as SAVAGEbot
+from elitesbot.utils import admin_cmd, sudo_cmd
+from userbot import CmdHelp, CMD_HELP, LOGS, bot as elitesbot
 from userbot.helpers.functions import (
     convert_toimage,
     convert_tosticker,
@@ -44,8 +44,8 @@ async def crop(imagefile, endname, x):
     inverted_image.save(endname)
 
 
-@SAVAGEbot.on(admin_cmd(pattern="invert$", outgoing=True))
-@SAVAGEbot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="invert$", outgoing=True))
+@elitesbot.on(sudo_cmd(pattern="invert$", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -128,8 +128,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="solarize$"))
-@SAVAGEbot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="solarize$"))
+@elitesbot.on(sudo_cmd(pattern="solarize$", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -212,8 +212,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="mirror$"))
-@SAVAGEbot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="mirror$"))
+@elitesbot.on(sudo_cmd(pattern="mirror$", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -296,8 +296,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="flip$"))
-@SAVAGEbot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="flip$"))
+@elitesbot.on(sudo_cmd(pattern="flip$", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -380,8 +380,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="gray$"))
-@SAVAGEbot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="gray$"))
+@elitesbot.on(sudo_cmd(pattern="gray$", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -464,8 +464,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="zoom ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="zoom ?(.*)", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return
@@ -555,8 +555,8 @@ async def memes(SAVAGE):
             os.remove(files)
 
 
-@SAVAGEbot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(outgoing=True, pattern="frame ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="frame ?(.*)", allow_sudo=True))
 async def memes(SAVAGE):
     if SAVAGE.fwd_from:
         return

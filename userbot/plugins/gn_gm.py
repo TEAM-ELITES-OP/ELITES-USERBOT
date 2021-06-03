@@ -2,7 +2,7 @@ import asyncio
 from collections import deque
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot import *
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="gn$", outgoing=True))

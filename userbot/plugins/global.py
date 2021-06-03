@@ -14,11 +14,11 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                    ChatBannedRights,
                                      MessageEntityMentionName,
                                        MessageMediaPhoto)
-from SAVAGEbot.utils import register, errors_handler
-from SAVAGEbot.utils import admin_cmd
+from elitesbot.utils import register, errors_handler
+from elitesbot.utils import admin_cmd
 from userbot import bot as borg
 from userbot.cmdhelp import CmdHelp
-from SAVAGEbot.utils import admin_cmd, sudo_cmd
+from elitesbot.utils import admin_cmd, sudo_cmd
 
 
 async def get_full_user(event):  

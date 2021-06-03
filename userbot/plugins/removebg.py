@@ -3,9 +3,9 @@ import requests
 import PIL.ImageOps
 from PIL import Image, ImageDraw, ImageFont
 
-from SAVAGEbot import CmdHelp
+from elitesbot import CmdHelp
 from userbot.Config import Config
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
    

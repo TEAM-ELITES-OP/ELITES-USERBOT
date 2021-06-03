@@ -1,4 +1,4 @@
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, LargeBinary, Numeric, UnicodeText
 
-from SAVAGEbot.plugins.sql_helper import BASE, SESSION
+from elitesbot.plugins.sql_helper import BASE, SESSION
 
 
 class Snips(BASE):

@@ -4,7 +4,7 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
 @bot.on(admin_cmd(pattern=r"mmf ?(.*)"))

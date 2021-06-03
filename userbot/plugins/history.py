@@ -1,11 +1,11 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from SAVAGEbot import bot, CmdHelp
-from SAVAGEbot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
+from elitesbot import bot, CmdHelp
+from elitesbot.utils import admin_cmd, edit_or_reply as eor, sudo_cmd
 
-@SAVAGEbot.on(admin_cmd(pattern="history ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="history ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="history ?(.*)", allow_sudo=True))
 async def _(SAVAGEevent):
     if SAVAGEevent.fwd_from:
         return 
@@ -37,8 +37,8 @@ async def _(SAVAGEevent):
              await SAVAGEevent.delete()
              await SAVAGEevent.client.send_message(SAVAGEevent.chat_id, response2.message)
 
-@SAVAGEbot.on(admin_cmd(pattern="unh ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="unh ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="unh ?(.*)", allow_sudo=True))
 async def _(SAVAGEevent):
     if SAVAGEevent.fwd_from:
         return 

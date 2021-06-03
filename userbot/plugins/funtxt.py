@@ -1,6 +1,6 @@
 import nekos
 
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 

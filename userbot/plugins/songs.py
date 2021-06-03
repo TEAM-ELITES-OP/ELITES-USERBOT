@@ -10,7 +10,7 @@ import re
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import bot
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.functions import deEmojify
 

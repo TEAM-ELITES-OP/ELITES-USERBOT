@@ -3,7 +3,7 @@ from pathlib import Path
 
 from telethon.tl.types import InputMessagesFilterDocument
 
-from SAVAGEbot.utils import admin_cmd, load_module
+from elitesbot.utils import admin_cmd, load_module
 from var import Var
 from userbot.cmdhelp import CmdHelp
 

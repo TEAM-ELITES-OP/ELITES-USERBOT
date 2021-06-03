@@ -7,7 +7,7 @@ import requests
 
 from userbot import CMD_HELP
 from userbot.Config import Config
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 import urllib3
 
@@ -22,7 +22,7 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
-SAVAGE_logo = "./H1M4N5HU0P/SAVAGEbot_logo.jpg"
+SAVAGE_logo = "./H1M4N5HU0P/elitesbot_logo.jpg"
 
 
 @borg.on(

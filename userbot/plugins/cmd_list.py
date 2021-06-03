@@ -1,15 +1,15 @@
 import asyncio
 import io
 
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import bot as SAVAGEbot
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import bot as elitesbot
 from userbot import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
-SAVAGE_logo = "./H1M4N5HU0P/SAVAGEbot_logo.jpg"
+SAVAGE_logo = "./H1M4N5HU0P/elitesbot_logo.jpg"
 
-@SAVAGEbot.on(admin_cmd(pattern=r"cmds"))
-@SAVAGEbot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern=r"cmds"))
+@elitesbot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
@@ -37,5 +37,5 @@ async def install(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(SAVAGE_file, f"Output Too Large. This is the file for the list of plugins in SAVAGEbot.\n\n**BY :-** {DEFAULTUSER}")
+            await edit_or_reply(SAVAGE_file, f"Output Too Large. This is the file for the list of plugins in elitesbot.\n\n**BY :-** {DEFAULTUSER}")
             await event.delete()

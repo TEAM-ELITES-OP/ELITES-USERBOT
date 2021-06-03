@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String
 
-from SAVAGEbot.plugins.sql_helper import BASE, SESSION
+from elitesbot.plugins.sql_helper import BASE, SESSION
 
 
 class Moidata(BASE):

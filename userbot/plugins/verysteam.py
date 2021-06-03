@@ -12,7 +12,7 @@ from datetime import datetime
 import aiohttp
 import magic
 import requests
-from SAVAGEbot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, progress, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 

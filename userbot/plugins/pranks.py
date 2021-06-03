@@ -1,7 +1,7 @@
 """
 credits to @mrconfused and @sandy1709
 """
-# Kang with credits. Using in SAVAGEbot...
+# Kang with credits. Using in elitesbot...
 #    Copyright (C) 2020  sandeep.n(π.$)
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -29,14 +29,14 @@ from userbot.helpers.functions import (
     trap,
     trash,
 )
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from . import *
 
 
 @bot.on(admin_cmd(pattern="threats(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
-async def SAVAGEbot(SAVAGEmemes):
+async def elitesbot(SAVAGEmemes):
     replied = await SAVAGEmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -89,7 +89,7 @@ async def SAVAGEbot(SAVAGEmemes):
 
 @bot.on(admin_cmd(pattern="trash(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
-async def SAVAGEbot(SAVAGEmemes):
+async def elitesbot(SAVAGEmemes):
     replied = await SAVAGEmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
         os.makedirs("./temp/")
@@ -142,7 +142,7 @@ async def SAVAGEbot(SAVAGEmemes):
 
 @bot.on(admin_cmd(pattern="trap(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
-async def SAVAGEbot(SAVAGEmemes):
+async def elitesbot(SAVAGEmemes):
     input_str = SAVAGEmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:
@@ -205,7 +205,7 @@ async def SAVAGEbot(SAVAGEmemes):
 
 @bot.on(admin_cmd(pattern="phc(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
-async def SAVAGEbot(SAVAGEmemes):
+async def elitesbot(SAVAGEmemes):
     input_str = SAVAGEmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
     if "-" in input_str:

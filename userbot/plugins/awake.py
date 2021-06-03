@@ -1,7 +1,7 @@
 import time
 
 from userbot import ALIVE_NAME, StartTime, SAVAGEversion
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName

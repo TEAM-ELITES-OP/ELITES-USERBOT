@@ -1,9 +1,9 @@
 import re
 
-from SAVAGEbot import bot
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from SAVAGEbot.cmdhelp import CmdHelp
-from SAVAGEbot.helpers.functions import deEmojify
+from elitesbot import bot
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.cmdhelp import CmdHelp
+from elitesbot.helpers.functions import deEmojify
 
 
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))

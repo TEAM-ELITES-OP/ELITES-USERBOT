@@ -7,7 +7,7 @@ from userbot.plugins.sql_helper.welcome_sql import (
     rm_welcome_setting,
     update_previous_welcome,
 )
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

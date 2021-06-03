@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from google_images_download import google_images_download
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 

@@ -1,7 +1,7 @@
 """WikiMedia.ORG
 Syntax: .wikimedia Query"""
 import requests
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 

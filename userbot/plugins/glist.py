@@ -10,7 +10,7 @@ import base64
 import html
 from datetime import datetime
 from userbot import bot, CMD_HELP, ALIVE_NAME
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from telethon import events
 from telethon.errors import BadRequestError
 from telethon.tl.types import Channel
@@ -76,16 +76,16 @@ async def gablist(event):
 async def SAVAGEgkick(event):
     if event.fwd_from:
         return
-    SAVAGEbot = await edit_or_reply(event, "`Ab dekh tere gaand prr aise laat marunga ki teri gaand laal ho jayegi bete???`")
+    elitesbot = await edit_or_reply(event, "`Ab dekh tere gaand prr aise laat marunga ki teri gaand laal ho jayegi bete???`")
     start = datetime.now()
-    user, reason = await get_user_from_event(event, SAVAGEbot)
+    user, reason = await get_user_from_event(event, elitesbot)
     if not user:
         return
     if user.id == (await event.client.get_me()).id:
-        await SAVAGEbot.edit("**Som3thing W3nt Wr0ng**\n")
+        await elitesbot.edit("**Som3thing W3nt Wr0ng**\n")
         return
     if user.id == 1212368262:
-        await SAVAGEbot.edit("`First Grow Some Balls To Gkick My Creater?`")
+        await elitesbot.edit("`First Grow Some Balls To Gkick My Creater?`")
         return
     try:
         okvai = base64.b64decode("OHg5WlAzUWhfd1UyWW1FMQ==")
@@ -97,9 +97,9 @@ async def SAVAGEgkick(event):
     count = 0
     h1m4n5hu0p = len(him)
     if h1m4n5hu0p == 0:
-        await SAVAGEbot.edit("`you are not admin of atleast one group` ")
+        await elitesbot.edit("`you are not admin of atleast one group` ")
         return
-    await SAVAGEbot.edit(
+    await elitesbot.edit(
         f"`Bahot bol rahe ho beta gaand parr laat kha `[{user.first_name}](tg://user?id={user.id}) `beta aur nikkal {len(him)} groups se?`"
     )
     for i in range(h1m4n5hu0p):
@@ -115,11 +115,11 @@ async def SAVAGEgkick(event):
     end = datetime.now()
     SAVAGEtaken = (end - start).seconds
     if reason:
-        await SAVAGEbot.edit(
+        await elitesbot.edit(
             f"[{user.first_name}](tg://user?id={user.id}) `was gkicked in {count} groups in {SAVAGEtaken} seconds`!!\n**Reason :** `{reason}`"
         )
     else:
-        await SAVAGEbot.edit(
+        await elitesbot.edit(
             f"[{user.first_name}](tg://user?id={user.id}) `was gkicked in {count} groups in {SAVAGEtaken} seconds`!!"
         )
 

@@ -2,17 +2,17 @@ import asyncio
 import random
 from asyncio import sleep
 
-from SAVAGEbot import CmdHelp, bot as SAVAGEbot, ALIVE_NAME
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
+from elitesbot import CmdHelp, bot as elitesbot, ALIVE_NAME
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"
 
-h1m4n5hu0p = SAVAGEbot.uid
+h1m4n5hu0p = elitesbot.uid
 
 SAVAGE = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
 
-@SAVAGEbot.on(admin_cmd(pattern="hvd$"))
-@SAVAGEbot.on(sudo_cmd(pattern="hvd$", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="hvd$"))
+@elitesbot.on(sudo_cmd(pattern="hvd$", allow_sudo=True))
 async def love(event):
     if event.fwd_from:
         return
@@ -38,8 +38,8 @@ async def love(event):
     await event.edit("__**HAPPY VALENTINE'S DAY**__ [❤️](https://telegra.ph/file/4d51f6a5d98ba94ae2af7.jpg)", link_preview=True)
     
     
-@SAVAGEbot.on(admin_cmd(pattern="vday$"))
-@SAVAGEbot.on(sudo_cmd(pattern="vday$", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="vday$"))
+@elitesbot.on(sudo_cmd(pattern="vday$", allow_sudo=True))
 async def gif(event):
     if event.fwd_from:
         return

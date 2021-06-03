@@ -9,7 +9,7 @@ import time
 from asyncio import create_subprocess_exec as asyncrunapp
 from asyncio.subprocess import PIPE as asyncPIPE
 
-from SAVAGEbot.utils import admin_cmd
+from elitesbot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 if not os.path.isdir("./SAVED"):

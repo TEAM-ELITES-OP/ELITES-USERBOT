@@ -3,12 +3,12 @@ import os
 import asyncio
 
 from userbot import CmdHelp
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot import bot as SAVAGEbot
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from userbot import bot as elitesbot
 
 
-@SAVAGEbot.on(admin_cmd(pattern=r"unpack", outgoing=True))
-@SAVAGEbot.on(sudo_cmd(pattern=r"unpack"))
+@elitesbot.on(admin_cmd(pattern=r"unpack", outgoing=True))
+@elitesbot.on(sudo_cmd(pattern=r"unpack"))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
     a = open(b, "r")
@@ -23,8 +23,8 @@ async def _(event):
     os.remove(b)
 
 
-@SAVAGEbot.on(admin_cmd(pattern="repack ?(.*)", outgoing=True))
-@SAVAGEbot.on(sudo_cmd(pattern="repack ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="repack ?(.*)", outgoing=True))
+@elitesbot.on(sudo_cmd(pattern="repack ?(.*)", allow_sudo=True))
 async def _(event):
     a = await event.get_reply_message()
     input_str = event.pattern_match.group(1)

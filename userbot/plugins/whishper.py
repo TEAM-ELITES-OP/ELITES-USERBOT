@@ -1,6 +1,6 @@
 # Made by @Kraken_The_BadASS for @SAVAGEBot_Official
 
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 

@@ -11,9 +11,9 @@ import os
 from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from SAVAGEbot.Config import Config
+from elitesbot.Config import Config
 
 LOGGER = Config.PLUGIN_CHANNEL
 SUDO_WALA = Config.SUDO_USERS
@@ -38,9 +38,9 @@ async def spammer(e):
 async def bigspam(SAVAGE):
     if not SAVAGE.text[0].isalpha() and SAVAGE.text[0] not in ("/", "#", "@", "!"):
         SAVAGE_msg = SAVAGE.text
-        SAVAGEbot_count = int(SAVAGE_msg[9:13])
+        elitesbot_count = int(SAVAGE_msg[9:13])
         SAVAGE_spam = str(SAVAGE.text[13:])
-        for i in range(1, SAVAGEbot_count):
+        for i in range(1, elitesbot_count):
             await SAVAGE.respond(SAVAGE_spam)
         await SAVAGE.delete()
         if LOGGER:
@@ -102,5 +102,5 @@ CmdHelp("spam").add_command(
 ).add_command(
   "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what SAVAGEbot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what elitesbot iz known for. The Best BigSpam Ever", ".bigspam 5000 Hello"
 ).add()

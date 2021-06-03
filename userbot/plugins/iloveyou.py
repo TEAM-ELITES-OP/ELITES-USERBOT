@@ -2,7 +2,7 @@
 # KEEP CREDITS ELSE GAY
 
 import random, re
-from SAVAGEbot.utils import admin_cmd
+from elitesbot.utils import admin_cmd
 import asyncio
 from telethon import events
 

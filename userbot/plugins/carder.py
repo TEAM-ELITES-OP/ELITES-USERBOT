@@ -6,12 +6,12 @@ from telethon.tl.functions.messages import DeleteHistoryRequest
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, edit_or_reply
-from SAVAGEbot import CmdHelp, bot as SAVAGEbot
+from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply
+from elitesbot import CmdHelp, bot as elitesbot
 
 
-@SAVAGEbot.on(admin_cmd("gencc$"))
-@SAVAGEbot.on(sudo_cmd("gencc$", allow_sudo=True))
+@elitesbot.on(admin_cmd("gencc$"))
+@elitesbot.on(sudo_cmd("gencc$", allow_sudo=True))
 async def _(SAVAGEevent):
     if SAVAGEevent.fwd_from:
         return
@@ -23,8 +23,8 @@ async def _(SAVAGEevent):
     await edit_or_reply(SAVAGEevent, f"__**👤 NAME :- **__\n`{SAVAGEname}`\n\n__**🏡 ADDRESS :- **__\n`{SAVAGEadre}`\n\n__**💸 CARD :- **__\n`{SAVAGEcard}`")
     
 
-@SAVAGEbot.on(admin_cmd(pattern="bin ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="bin ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -44,8 +44,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
 
-@SAVAGEbot.on(admin_cmd(pattern="vbv ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="vbv ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="vbv ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -65,8 +65,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
     
     
-@SAVAGEbot.on(admin_cmd(pattern="key ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="key ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="key ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -86,8 +86,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
  
   
-@SAVAGEbot.on(admin_cmd(pattern="iban ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="iban ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="iban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -107,8 +107,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
 
     
-@SAVAGEbot.on(admin_cmd(pattern="ccheck ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="ccheck ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="ccheck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 
@@ -128,8 +128,8 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
              
              
-@SAVAGEbot.on(admin_cmd(pattern="ccbin ?(.*)"))
-@SAVAGEbot.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
+@elitesbot.on(admin_cmd(pattern="ccbin ?(.*)"))
+@elitesbot.on(sudo_cmd(pattern="ccbin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return 

@@ -5,11 +5,11 @@ import os
 import time
 from datetime import datetime
 
-from SAVAGEbot.utils import admin_cmd, sudo_cmd, progress
+from elitesbot.utils import admin_cmd, sudo_cmd, progress
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./downloads/SAVAGEbot.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./downloads/elitesbot.media.ffmpeg"
 
 async def reply_id(event):
     reply_to_id = None

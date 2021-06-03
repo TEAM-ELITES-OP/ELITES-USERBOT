@@ -5,7 +5,7 @@ import sys
 import git
 
 from userbot.Config import Config
-from SAVAGEbot.utils import admin_cmd, sudo_cmd
+from elitesbot.utils import admin_cmd, sudo_cmd
 
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (

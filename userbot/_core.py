@@ -140,5 +140,5 @@ CmdHelp("core").add_command(
 ).add_command(
   "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
 ).add_command(
-  "cmds", None, "Gives out the list of modules in SAVAGEbot."
+  "cmds", None, "Gives out the list of modules in elitesbot."
 ).add()
