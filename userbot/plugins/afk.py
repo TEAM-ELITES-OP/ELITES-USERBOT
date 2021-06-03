@@ -7,7 +7,7 @@ from datetime import datetime
 from telethon import events
 from telethon.tl import functions, types
 from userbot import CMD_HELP
-from userbot import ALIVE_NAME, SAVAGEversion
+from userbot import ALIVE_NAME, elitesversion
 from elitesbot.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 

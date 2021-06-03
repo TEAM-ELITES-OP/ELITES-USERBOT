@@ -2,7 +2,7 @@
 import asyncio
 import random
 from telethon import events
-from userbot import ALIVE_NAME, SAVAGEversion
+from userbot import ALIVE_NAME, elitesversion
 from elitesbot.utils import admin_cmd, sudo_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.cmdhelp import CmdHelp
