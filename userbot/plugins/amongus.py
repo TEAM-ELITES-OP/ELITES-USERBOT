@@ -9,7 +9,7 @@ from userbot.cmdhelp import CmdHelp
 from userbot import *
 from elitesbot.utils import *
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "elites User"
 
 
 @bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
@@ -60,42 +60,42 @@ async def _(event):
     stcr4 = await event.client.send_file(
         event.chat_id, "CAADAQADLwADnjOcH-wxu-ehy6NRAg"
     )
-    SAVAGEevent = await event.reply(f"{name} is ejected.......🤐")
+    elitesbotevent = await event.reply(f"{name} is ejected.......🤐")
     await asyncio.sleep(2)
-    await SAVAGEevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await elitesbot.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await elitesbot.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await elitesbot.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await elitesbot.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await elitesbot.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await elitesbot.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.5)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     await stcr4.delete()
     if cmd == "":
-        await SAVAGEevent.edit(
+        await elitesbotevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await SAVAGEevent.delete()
+        await elitesbotevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADLQADnjOcH39IqwyR6Q_0Ag")
     elif cmd == "n":
-        await SAVAGEevent.edit(
+        await elitesbotevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ{name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
         await asyncio.sleep(4)
-        await SAVAGEevent.delete()
+        await elitesbotevent.delete()
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
@@ -106,34 +106,34 @@ async def _(event):
         return
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()
-    SAVAGEevent = await edit_or_reply(event, f"{name} is ejected.......")
+    elitesbotevent = await edit_or_reply(event, f"{name} is ejected.......")
     await asyncio.sleep(2)
-    await SAVAGEevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
+    await elitesbotevent.edit("ඞㅤㅤㅤㅤ ㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
+    await elitesbotevent.edit("ㅤඞㅤㅤㅤㅤ ㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤ ඞㅤㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤ ඞㅤㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤ ඞㅤㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤ ඞㅤㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤ ඞㅤㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤ ඞㅤ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ඞ")
     await asyncio.sleep(0.8)
-    await SAVAGEevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
+    await elitesbotevent.edit("ㅤㅤㅤㅤㅤㅤㅤㅤ ㅤ")
     await asyncio.sleep(0.2)
     if cmd == "":
-        await SAVAGEevent.edit(
+        await elitesbotevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         0 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
     elif cmd == "n":
-        await SAVAGEevent.edit(
+        await elitesbotevent.edit(
             f". 　　　。　　　　•　 　ﾟ　　。 　　.\n .　　　 　　.　　　　　。　　 。　. 　\n\n  . 　　 。   　     ඞ         。 . 　　 • 　　　　•\n\n  ﾟ {name} was not an Imposter.      。　. 　 　       。　.                                        。　. \n                                   　.          。　  　. \n　'         1 Impostor remains    　 。　.  　　.                。　.        。 　     .          。 　            .               .         .    ,      。\n　　ﾟ　　　.　　.    ,　 　。　 　. 　 .     。"
         )
 
