@@ -1,6 +1,4 @@
-# credits to userge
-# ported to MafiaBot by @H1M4N5HU0P
-# will be adding more soon
+
 
 import asyncio
 import os
@@ -9,7 +7,7 @@ import urllib
 import requests
 
 from userbot import *
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd("boobs$"))
