@@ -22,7 +22,7 @@ ELITES = bot.uid
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/a65900c74cb9a0bd89c11.jpg"
+file1 = "https://telegra.ph/file/cf218c1f0934581d0db48.jpg"
 """ =======================CONSTANTS====================== """
 
 pm_caption = "_🔥 𝙀𝙇𝙄𝙏𝙀𝙎 𝘽𝙊𝙏 𝙄𝙎 𝙊𝙉 𝙁𝙄𝙍𝙀🔥_\n\n"
