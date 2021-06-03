@@ -5,7 +5,7 @@ import requests
 from telethon import functions
 
 from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
-from SAVAGEbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 @bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
@@ -14,8 +14,8 @@ async def yardim(event):
         return
     tgbotusername = Config.TG_BOT_USER_NAME_BF_HER
     input_str = event.pattern_match.group(1)
-    if tgbotusername is not None or SAVAGE_input == "text":
-        results = await event.client.inline_query(tgbotusername, "@savage_userbot")
+    if tgbotusername is not None or elitesbot_input == "text":
+        results = await event.client.inline_query(tgbotusername, "@elites_userbot")
         await results[0].click(
             event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
         )
@@ -40,9 +40,9 @@ async def info(event):
     input_str = event.pattern_match.group(1)
     if input_str == "text":
         string = (
-            "Total {count} commands found in {plugincount} sudo plugins of savage bot\n\n"
+            "Total {count} commands found in {plugincount} sudo plugins of ELITES bot\n\n"
         )
-        SAVAGEcount = 0
+        elitesbotcount = 0
         plugincount = 0
         for i in sorted(SUDO_LIST):
             plugincount += 1
@@ -50,10 +50,10 @@ async def info(event):
             for iter_list in SUDO_LIST[i]:
                 string += "    " + str(iter_list)
                 string += "\n"
-                SAVAGEcount += 1
+                elitesbotcount += 1
             string += "\n"
         if len(string) > 4095:
-            data = string.format(count=SAVAGEcount, plugincount=plugincount)
+            data = string.format(count=elitesbotcount, plugincount=plugincount)
             key = (
                 requests.post(
                     "https://nekobin.com/api/documents", json={"content": data}
@@ -67,19 +67,19 @@ async def info(event):
             await event.reply(reply_text, link_preview=False)
             return
         await event.reply(
-            string.format(count=SAVAGEcount, plugincount=plugincount), link_preview=False
+            string.format(count=elitesbotcount, plugincount=plugincount), link_preview=False
         )
         return
     if input_str:
         if input_str in SUDO_LIST:
             string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
-            SAVAGEcount = 0
+            elitesbotcount = 0
             for i in SUDO_LIST[input_str]:
                 string += f"  •  <code>{i}</code>"
                 string += "\n"
-                SAVAGEcount += 1
+                elitesbotcount += 1
             await event.reply(
-                string.format(count=SAVAGEcount, input_str=input_str), parse_mode="HTML"
+                string.format(count=elitesbotcount, input_str=input_str), parse_mode="HTML"
             )
         else:
             reply = await event.reply(input_str + " is not a valid plugin!")
@@ -90,9 +90,9 @@ async def info(event):
         string = "<b>Please specify which plugin do you want help for !!\
             \nNumber of plugins : </b><code>{count}</code>\
             \n<b>Usage:</b> <code>.help plugin name</code>\n\n"
-        SAVAGEcount = 0
+        elitesbotcount = 0
         for i in sorted(SUDO_LIST):
             string += "≈ " + f"<code>{str(i)}</code>"
             string += " "
-            SAVAGEcount += 1
+            elitesbotcount += 1
         await event.reply(string.format(count=SAVAGEcount), parse_mode="HTML")
