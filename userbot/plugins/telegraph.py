@@ -10,7 +10,7 @@ from userbot.cmdhelp import CmdHelp
 
 MAFIA_NAME = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
 
-h1m4n5hu0p = bot.uid
+eliteboy = bot.uid
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)

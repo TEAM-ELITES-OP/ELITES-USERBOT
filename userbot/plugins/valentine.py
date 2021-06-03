@@ -7,9 +7,9 @@ from elitesbot.utils import admin_cmd, sudo_cmd, edit_or_reply as eor
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Your Lover"
 
-h1m4n5hu0p = elitesbot.uid
+eliteboy = elitesbot.uid
 
-SAVAGE = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
+SAVAGE = f"[{DEFAULTUSER}](tg://user?id={eliteboy})"
 
 @elitesbot.on(admin_cmd(pattern="hvd$"))
 @elitesbot.on(sudo_cmd(pattern="hvd$", allow_sudo=True))

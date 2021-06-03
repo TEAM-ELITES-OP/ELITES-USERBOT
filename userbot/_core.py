@@ -82,7 +82,7 @@ async def install(event):
     
 @elitesbot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
 @elitesbot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
-async def uninstall(h1m4n5hu0p):
+async def uninstall(eliteboy):
     if eliteboy.fwd_from:
         return
     shortname = eliteboy.pattern_match["shortname"]
