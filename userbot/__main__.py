@@ -7,7 +7,7 @@ from telethon import TelegramClient
 from var import Var
 from userbot.Config import Config
 from userbot.utils import load_module
-from userbot import LOAD_PLUG, LOGS, mafiaversion
+from userbot import LOAD_PLUG, LOGS, elitesversion
 from pathlib import Path
 import asyncio
 import telethon.utils
@@ -34,9 +34,9 @@ else:
             api_hash=Var.API_HASH
         ).start(bot_token=Var.TG_BOT_TOKEN_BF_HER)
         print("Initialisation finished with no errors")
-        print("Starting MafiaBot")
+        print("Starting elites")
         bot.loop.run_until_complete(add_bot(Var.TG_BOT_USER_NAME_BF_HER))
-        print("MafiaBot Startup Completed")
+        print("elites Startup Completed")
     else:
         bot.start()
 
