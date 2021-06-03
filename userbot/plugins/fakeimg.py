@@ -21,4 +21,4 @@ async def _(event):
     fole = "SAVAGEBOT.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/savagebot.jpg ")
+    os.system("rm /root/userbot/elitesbot.jpg ")
