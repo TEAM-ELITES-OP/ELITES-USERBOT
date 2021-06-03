@@ -11,9 +11,9 @@ from userbot import ALIVE_NAME, elitesbotversion
 from elitesbot.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "elites User"
 
-SAVAGE = bot.uid
+elitesbot = bot.uid
 
 
 global USER_AFK  # pylint:disable=E0602
@@ -46,7 +46,7 @@ async def set_not_afk(event):
             event.chat_id,
             "🔥__Back alive!__\n**No Longer afk.**\n⏱️ `Was afk for:``"
             + total_afk_time
-            + "`", file=SAVAGEpic
+            + "`", file=elitesbotpic
         )
         try:
             await borg.send_message(  # pylint:disable=E0602
@@ -60,7 +60,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
                 + "for the proper functioning of afk functionality "
-                + "Ask in @SAVAGE_USERBOT to get help setting this value\n\n `{}`".format(str(e)),
+                + "Ask in @ELITES_USERBOT to get help setting this value\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True,
             )
@@ -102,7 +102,7 @@ async def on_afk(event):
   if reason
             else f"**Heyy!**\n__I am currently unavailable.__\n__Since when, you ask? From__ `{total_afk_time}`\nI'll be bacK when I am Free"
         )
-        msg = await event.reply(message_to_reply, file=SAVAGEpic)
+        msg = await event.reply(message_to_reply, file=elitesbotpic)
         await asyncio.sleep(2)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
             await last_afk_message[event.chat_id].delete()  # pylint:disable=E0602
@@ -128,26 +128,26 @@ async def _(event):
     start_1 = datetime.now()
     afk_start = start_1.replace(microsecond=0)
     reason = event.pattern_match.group(1)
-    SAVAGEpic = await event.client.download_media(eliteboy)
+    elitesbotpic = await event.client.download_media(eliteboy)
     if not USER_AFK:  # pylint:disable=E0602
         last_seen_status = await borg(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
         )
         if isinstance(last_seen_status.rules, types.PrivacyValueAllowAll):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
-        USER_AFK = f"yes: {reason} {SAVAGEpic}"  # pylint:disable=E0602
+        USER_AFK = f"yes: {reason} {elitesbotpic}"  # pylint:disable=E0602
         if reason:
             await borg.send_message(
-                event.chat_id, f"__**I'm going afk🚶**__ \n⚜️ Because `{reason}`", file=SAVAGEpic
+                event.chat_id, f"__**I'm going afk🚶**__ \n⚜️ Because `{reason}`", file=elitesbotpic
             )
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**🚶", file=SAVAGEpic)
+            await borg.send_message(event.chat_id, f"**I am Going afk!**🚶", file=elitesbotpic)
         await asyncio.sleep(0.001)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=SAVAGEpic
+                f"#AFKTRUE \nSet AFK mode to True, and Reason is {reason}",file=elitesbotpic
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
