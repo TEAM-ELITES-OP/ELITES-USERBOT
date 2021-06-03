@@ -137,17 +137,17 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    SAVAGEevent = await edit_or_reply(promt, "Promoting...")
+    elitesbotevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+        rank = "Elite Usᴇʀ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await SAVAGEevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+        await elitesbotevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
     if BOTLOG:
         await promt.client.send_message(
@@ -178,17 +178,17 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    SAVAGEevent = await edit_or_reply(promt, "Promoting...")
+    elitesbotevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+        rank = "Elite Usᴇʀ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await SAVAGEevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+        await elitesbotevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
     if BOTLOG:
         await promt.client.send_message(
@@ -218,17 +218,17 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    SAVAGEevent = await edit_or_reply(promt, "Promoting...")
+    elitesbotevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+        rank = "Elite Usᴇʀ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await SAVAGEevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+        await elitesbotevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
     if BOTLOG:
         await promt.client.send_message(
@@ -259,17 +259,17 @@ async def promote(promt):
         delete_messages=True,
         pin_messages=True,
     )
-    SAVAGEevent = await edit_or_reply(promt, "Promoting...")
+    elitesbotevent = await edit_or_reply(promt, "Promoting...")
     user, rank = await get_user_from_event(promt)
     if not rank:
-        rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+        rank = "Elite Usᴇʀ"
     if not user:
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await SAVAGEevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
+        await elitesbotevent.edit("Hɴ Kʀ Dɪʏᴀ Pʀᴏᴍᴏᴛᴇ..Cʜʟ ᴀʙ Dᴀᴀʀᴜ Pɪʟᴡᴀ😂😉")
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
     if BOTLOG:
         await promt.client.send_message(
@@ -294,8 +294,8 @@ async def demote(dmod):
     if not admin and not creator:
         await edit_or_reply(dmod, NO_ADMIN)
         return
-    SAVAGEevent = await edit_or_reply(dmod, "Demoting...")
-    rank = "Sᴀᴠᴀɢᴇ Usᴇʀ"
+    elitesbotevent = await edit_or_reply(dmod, "Demoting...")
+    rank = "Elite Usᴇʀ"
     user = await get_user_from_event(dmod)
     user = user[0]
     if not user:
@@ -311,9 +311,9 @@ async def demote(dmod):
     try:
         await dmod.client(EditAdminRequest(dmod.chat_id, user.id, newrights, rank))
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
-    await SAVAGEevent.edit("Demoted Successfully!")
+    await elitesbotevent.edit("Demoted Successfully!")
     if BOTLOG:
         await dmod.client.send_message(
             BOTLOG_CHATID,
@@ -338,23 +338,23 @@ async def ban(bon):
     user, reason = await get_user_from_event(bon)
     if not user:
         return
-    SAVAGEevent = await edit_or_reply(bon, "Banning this Fᴜᴄᴋᴇʀ")
+    elitesbotevent = await edit_or_reply(bon, "Banning this Fᴜᴄᴋᴇʀ")
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
-        await SAVAGEevent.edit(NO_PERM)
+        await elitesbotevent.edit(NO_PERM)
         return
     try:
         reply = await bon.get_reply_message()
         if reply:
             await reply.delete()
     except BadRequestError:
-        await SAVAGEevent.edit("I ain't got msg deleting right. But still Banned!")
+        await elitesbotevent.edit("I ain't got msg deleting right. But still Banned!")
         return
     if reason:
-        await SAVAGEevent.edit(f"{str(user.id)} is banned !!\nReason: {reason}")
+        await elitesbotevent.edit(f"{str(user.id)} is banned !!\nReason: {reason}")
     else:
-        await SAVAGEevent.edit(f"{str(user.id)} is banned!")
+        await elitesbotevent.edit(f"{str(user.id)} is banned!")
     if BOTLOG:
         await bon.client.send_message(
             BOTLOG_CHATID,
@@ -376,14 +376,14 @@ async def nothanos(unbon):
     if not admin and not creator:
         await edit_or_reply(unbon, NO_ADMIN)
         return
-    SAVAGEevent = await edit_or_reply(unbon, "Unbanning...")
+    elitesbotevent = await edit_or_reply(unbon, "Unbanning...")
     user = await get_user_from_event(unbon)
     user = user[0]
     if not user:
         return
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await SAVAGEevent.edit("Unbanned Successfully!")
+        await elitesbotevent.edit("Unbanned Successfully!")
         if BOTLOG:
             await unbon.client.send_message(
                 BOTLOG_CHATID,
@@ -392,7 +392,7 @@ async def nothanos(unbon):
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
-        await SAVAGEevent.edit("Sorry I Can't Unban This Retard!")
+        await elitesbotevent.edit("Sorry I Can't Unban This Retard!")
 
 
 @command(incoming=True)
@@ -463,19 +463,19 @@ async def kick(usr):
     if not user:
         await edit_or_reply(usr, "Couldn't fetch user.")
         return
-    SAVAGEevent = await edit_or_reply(usr, "Kicking...")
+    elitesbotevent = await edit_or_reply(usr, "Kicking...")
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
     except Exception as e:
-        await SAVAGEevent.edit(NO_PERM + f"\n{str(e)}")
+        await elitesbotevent.edit(NO_PERM + f"\n{str(e)}")
         return
     if reason:
-        await SAVAGEevent.edit(
+        await elitesbotevent.edit(
             f"Kicked [{user.first_name}](tg://user?id={user.id})!\nReason: {reason}"
         )
     else:
-        await SAVAGEevent.edit(f"Kicked [{user.first_name}](tg://user?id={user.id})!")
+        await elitesbotevent.edit(f"Kicked [{user.first_name}](tg://user?id={user.id})!")
     if BOTLOG:
         await usr.client.send_message(
             BOTLOG_CHATID,
