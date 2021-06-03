@@ -9,7 +9,7 @@ from var import Var
 
 
 StartTime = time.time()
-SAVAGEversion = "2.0.4"
+elitesversion = "2.0.4"
 botversion = "0.1"
 
 os.system("pip install aria2p")
@@ -32,7 +32,7 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-MAFIA_ID = ["1559064347"]
+elitesbot_ID = ["1559064347"]
 
 """ PPE initialization. """
 
