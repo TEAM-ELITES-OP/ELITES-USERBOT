@@ -1,19 +1,3 @@
-#    Copyright (C) @SupRemE_AnanD 2021-2022
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-#
-#    This Inline Helper Code is solely owned by @SupRemE_AnanD
-#    You Should Not Copy This Code Without Proper Permission.
 
 from math import ceil
 from re import compile
@@ -25,13 +9,13 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from SAVAGEbot.utils import *
+from elitesbot.utils import *
 from userbot.Config import Config
 
-SAVAGE_row = 5
-SAVAGE_emoji = 5
+Elites_row = 5
+Elites_emoji = 5
 # thats how a lazy guy imports
-# SAVAGE
+# elites op
 
 def button(page, modules):
     Row = 5
@@ -80,10 +64,10 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝚂𝙰𝚅𝙰𝙶𝙴 2.0**\n\n__𝙽𝙾. 𝙾𝙵 𝙿𝙻𝚄𝙶𝙶𝙸𝙽𝚂 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙴𝙳__ :`{len(CMD_HELP)}`\n**𝙿𝙰𝙶𝙴:** 1/{veriler[0]}",
+                text=f"**𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝙴𝙻𝙸𝚃𝙴𝚂 𝙱𝙾𝚃**\n\n__𝙽𝙾. 𝙾𝙵 𝙿𝙻𝚄𝙶𝙶𝙸𝙽𝚂 𝙸𝙽𝚂𝚃𝙰𝙻𝙻𝙴𝙳__ :`{len(CMD_HELP)}`\n**𝙿𝙰𝙶𝙴:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=False,
-            )
+            )                
         elif query.startswith("http"):
             part = query.split(" ")
             result = builder.article(
@@ -95,20 +79,20 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         elif event.text=='':
             result = builder.article(
                 "@savage_Support",
-                text="""🔥 𝖲𝙰𝚅𝙰𝙶𝙴'𝚜 𝚁𝙴𝙿𝙾 , 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 , 𝚂𝚃𝚁𝙸𝙽𝙶 , 𝙰𝙱𝙾𝚄𝚃 𝙱𝙾𝚃 👇🔥\n [𝖲𝙰𝚅𝙰𝙶𝙴](t.me/savage_userbot)™""",
+                text="""🔥 𝙴𝙻𝙸𝚃𝙴𝚂'𝚜 𝚁𝙴𝙿𝙾 , 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙲𝙷𝙰𝚃 , 𝚂𝚃𝚁𝙸𝙽𝙶 , 𝙰𝙱𝙾𝚄𝚃 𝙱𝙾𝚃 👇🔥\n [𝙴𝙻𝙸𝚃𝙴𝚂](t.me/elites_userbot)™""",
                 buttons=[
-                    [
+                    [            
                         custom.Button.url("🔗 𝖲𝚃𝚁𝙸𝙽𝙶  🔗", "https://replit.com/@sameerpanthi/SAVAGE-BOT#main.py"),
                         custom.Button.url(
-                            "💫 𝖲𝚄𝙿𝙿𝙾𝚁𝚃 💫", "https://t.me/SAVAGE_USERBOT"
+                            "💫 𝖲𝚄𝙿𝙿𝙾𝚁𝚃 💫", "https://t.me/ELITES_USERBOT"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "⚜ 𝖱𝙴𝙿𝙾 ⚜", "https://github.com/sameerpanthi/SAVAGE-2.0-BOT"),
+                            "⚜ 𝖱𝙴𝙿𝙾 ⚜", "https://github.com/TEAM-ELITES-OP/ELITES-OP"),
                         custom.Button.url
                     (
-                            "👑 𝖠𝙱𝙾𝚄𝚃 𝖡𝙾𝚃 👑", "https://t.me/joinchat/p6IwtKP0l844YTY1"
+                            "👑 creator 👑", "t.me/ELITEBOY_X"
                     )
                     ],
                 ],
@@ -120,27 +104,27 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def page(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @SAVAGE_USERBOT",
+                "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @ELITES_USERBOT",
                 cache_time=0,
                 alert=True,
             )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Lᴇɢᴇɴᴅʀʏ Aғ** [𝐒𝐀𝐕𝐀𝐆𝐄 2.0](https://t.me/SAVAGE_USERBOT) __Wᴏʀᴋɪɴɢ...__\n\n**Nᴜᴍɴᴇʀ Oғ Mᴏᴅᴜʟᴇs Iɴsᴛᴀʟʟᴇᴅ :** `{len(CMD_HELP)}`\n**Pᴀɢᴇ:** {page + 1}/{veriler[0]}",
+            f"**Lᴇɢᴇɴᴅʀʏ Aғ** [𝙴𝙻𝙸𝚃𝙴𝚂 𝙱𝙾𝚃](https://t.me/ELITES_USERBOT) __Wᴏʀᴋɪɴɢ...__\n\n**Nᴜᴍɴᴇʀ Oғ Mᴏᴅᴜʟᴇs Iɴsᴛᴀʟʟᴇᴅ :** `{len(CMD_HELP)}`\n**Pᴀɢᴇ:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=False,
-        )
-        
+        )                                    
+                    
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            await delete_SAVAGE(event,
-              "⚜️𝐒𝐀𝐕𝐀𝐆𝐄 2.0 Bᴏᴛ Mᴇɴᴜ Pʀᴏᴠɪᴅᴇʀ ɪs CLᴏsᴇᴅ Nᴏᴡ⚜️\n\n         **[© 𝑺𝑨𝑽𝑨𝑮𝑬 ™](t.me/SAVAGE_USERBOT)**", 5, link_preview=False
+            await delete_elitesbot(event,
+              "⚜️ 𝙴𝙻𝙸𝚃𝙴𝚂 𝙱𝙾𝚃 Mᴇɴᴜ Pʀᴏᴠɪᴅᴇʀ ɪs CLᴏsᴇᴅ Nᴏᴡ⚜️\n\n         **[© 𝙴𝙻𝙸𝚃𝙴𝚂 ™](t.me/elites_USERBOT)**", 5, link_preview=False
             )
         else:
-            SAVAGE_alert = "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @SAVAGE_USERBOT"
-            await event.answer(SAVAGE_alert, cache_time=0, alert=True)
+            SAVAGE_alert = "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @elites_USERBOT"
+            await event.answer(elites_alert, cache_time=0, alert=True)
           
     @tgbot.on(
         callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
@@ -148,7 +132,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @SAVAGE_USERBOT",
+                "Hᴇʏ Bɪᴛᴄʜ Dᴏɴᴛ Usᴇ Mʏ ʙᴏᴛ .. ᴍᴀᴋᴇ Uʀ Oᴡɴ Usᴇʀʙᴏᴛ Aɴᴅ Usᴇ @elites_USERBOT",
                 cache_time=0,
                 alert=True,
             )
@@ -224,5 +208,3 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         )
 
 
-# Ask owner before using it in your codes
-# Kangers like LB stay away...
