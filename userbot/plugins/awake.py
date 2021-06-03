@@ -1,6 +1,6 @@
 import time
 
-from userbot import ALIVE_NAME, StartTime, mafiaversion
+from userbot import ALIVE_NAME, StartTime, elitesbotversion
 from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
@@ -67,7 +67,7 @@ async def amireallyalive(alive):
         SAVAGE_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         SAVAGE_caption += f"__𖣘 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 𖣘__\n\n"
         SAVAGE_caption += f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  : `1.15.0`\n\n"
-        SAVAGE_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{mafiaversion}`\n\n"
+        SAVAGE_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{elitesbotversion}`\n\n"
         SAVAGE_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 : {mention}\n\n"
         SAVAGE_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
         SAVAGE_caption += f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
@@ -83,7 +83,7 @@ async def amireallyalive(alive):
             f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
             f"__𖣘 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 𖣘__\n\n"
             f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  :** `1.15.0`\n\n"
-            f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{mafiaversion}`\n\n"
+            f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{elitesbotversion}`\n\n"
             f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 :** {mention}\n\n"
             f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
             f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
