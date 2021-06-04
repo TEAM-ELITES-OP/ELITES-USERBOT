@@ -15,8 +15,8 @@ elitesbot_logo = "./ELITES-OP/ELITES-BOT-LOGO.jpg"
 eliteboy = elitesbot.uid
 elitesbot = f"[{DEFAULTUSER}](tg://user?id={eliteboy})"
 
-@elitesbot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
-@elitesbot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
 async def send(event):
     if event.fwd_from:
         return
@@ -39,8 +39,8 @@ async def send(event):
     else:
         await edit_or_reply(event, "File not found..... Kek")
 
-@elitesbot.on(admin_cmd(pattern="install$", outgoing=True))
-@elitesbot.on(sudo_cmd(pattern="install$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="install$", outgoing=True))
+@bot.on(sudo_cmd(pattern="install$", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
@@ -80,8 +80,8 @@ async def install(event):
             await event.edit(f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
     
-@elitesbot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
-@elitesbot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
 async def uninstall(eliteboy):
     if eliteboy.fwd_from:
         return
@@ -94,8 +94,8 @@ async def uninstall(eliteboy):
     except OSError as e:
         await eliteboy.edit("Error: %s : %s" % (dir_path, e.strerror))
 
-@elitesbot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
-@elitesbot.on(sudo_cmd(pattern=r"upload (?P<shortname>\w+)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@bot.on(sudo_cmd(pattern=r"upload (?P<shortname>\w+)$", allow_sudo=True))
 async def unload(event):
     if event.fwd_from:
         return
@@ -111,8 +111,8 @@ async def unload(event):
         )
 
 
-@elitesbot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
-@elitesbot.on(sudo_cmd(pattern=r"load (?P<shortname>\w+)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@bot.on(sudo_cmd(pattern=r"load (?P<shortname>\w+)$", allow_sudo=True))
 async def load(event):
     if event.fwd_from:
         return
