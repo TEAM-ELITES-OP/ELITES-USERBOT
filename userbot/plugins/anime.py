@@ -9,8 +9,8 @@ from elitesbot.helpers.functions import deEmojify
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(eliteboy):
-    SAVAGE = eliteboy.pattern_match.group(1)
-    if not SAVAGE:
+    elitesbot = eliteboy.pattern_match.group(1)
+    if not elitesbot:
         if eliteboy.is_reply:
             (await eliteboy.get_reply_message()).message
         else:
@@ -18,7 +18,7 @@ async def nope(eliteboy):
             )
             return
 
-    troll = await bot.inline_query("animedb_bot", f"{(deEmojify(SAVAGE))}")
+    troll = await bot.inline_query("animedb_bot", f"{(deEmojify(elitesbot))}")
 
     await troll[0].click(
         eliteboy.chat_id,
