@@ -186,10 +186,10 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_COMMAND_HAND_LER) == 2:
-                elitesbot = "^" + Config.SUDO_COMMAND_HAND_LER
+                elitesbotreg = "^" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.SUDO_COMMAND_HAND_LER[1]
             elif len(Config.SUDO_COMMAND_HAND_LER) == 1:
-                SAVAGEreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
+                elitesbotreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
             args["pattern"] = re.compile(elitesbotreg + pattern)
             if command is not None:
