@@ -5,7 +5,7 @@ from userbot import *
 from elitesbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mafia User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "elites User"
 
 
 @bot.on(admin_cmd(pattern=r"boxs$", outgoing=True))
@@ -42,7 +42,7 @@ async def _(event):
     animation_ttl = range(12)
     event = await edit_or_reply(event, "`Deploying...`")
     animation_chars = [
-        "**Heroku Connecting To Latest [Github Build](sameerpanthi/SAVAGE-BOT-2.0)**",
+        "**Heroku Connecting To Latest [Github Build](TEAM-ELITES-OP/ELITESBOT)**",
         f"**Build started by user** {DEFAULTUSER}",
         f"**Deploy** `535a74f0` **by user** **{DEFAULTUSER}**",
         "**Restarting Heroku Server...**",
