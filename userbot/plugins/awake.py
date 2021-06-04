@@ -17,8 +17,8 @@ async def reply_id(event):
 
 DEFAULTUSER = ALIVE_NAME or "Mafia User"
 MAFIA_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝕃𝕖𝕘𝕖𝕟𝕕𝕒𝕣𝕪_𝔸𝔽_𝕊𝕒𝕧𝕒𝕘𝕖𝕓𝕠𝕥"
-
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝕃𝕖𝕘𝕖𝕟𝕕𝕒𝕣𝕪_𝔸𝔽_𝕖𝕝𝕚𝕥𝕖𝕤𝕓𝕠𝕥"
+                                  
 USERID = bot.uid
 
 mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
@@ -26,7 +26,7 @@ mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 
 def get_readable_time(seconds: int) -> str:
     count = 0
-    ping_time = ""
+    ping_time = ""             
     time_list = []
     time_suffix_list = ["s", "m", "h", "days"]
 
@@ -67,9 +67,9 @@ async def amireallyalive(alive):
         SAVAGE_caption += f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
         SAVAGE_caption += f"__𖣘 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 𖣘__\n\n"
         SAVAGE_caption += f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  : `1.15.0`\n\n"
-        SAVAGE_caption += f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{elitesbotversion}`\n\n"
+        SAVAGE_caption += f"✰ 𝙴𝙻𝙸𝚃𝙴𝚂 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 : `{elitesbotversion}`\n\n"
         SAVAGE_caption += f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 : {mention}\n\n"
-        SAVAGE_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
+        SAVAGE_caption += f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/eLITES_userbot)\n\n"
         SAVAGE_caption += f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
 
         await alive.client.send_file(
@@ -83,8 +83,8 @@ async def amireallyalive(alive):
             f"≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈\n"
             f"__𖣘 𝚂𝚈𝚂𝚃𝙴𝙼 𝚂𝚃𝙰𝚃𝚄𝚂 𖣘__\n\n"
             f"✰ 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 𝚅𝙴𝚁𝚂𝙸𝙾𝙽  :** `1.15.0`\n\n"
-            f"✰ 𝚂𝙰𝚅𝙰𝙶𝙴 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{elitesbotversion}`\n\n"
+            f"✰ 𝙴𝙻𝙸𝚃𝙴𝚂 𝚅𝙴𝚁𝚂𝙸𝙾𝙽 :**`{elitesbotversion}`\n\n"
             f"✰ 𝙼𝚈 𝙱𝙾𝚂𝚂 :** {mention}\n\n"
-            f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/savage_userbot)\n\n"
+            f"✰ 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 : [𝙶𝚁𝙾𝚄𝙿](t.me/ELITES_userbot)\n\n"
             f"✰ 𝚄𝙿 𝚃𝙸𝙼𝙴 : `{uptime}\n`"
         )
