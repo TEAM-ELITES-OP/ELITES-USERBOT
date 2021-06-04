@@ -126,7 +126,7 @@ def admin_cmd(pattern=None, command=None, **args):
             elif len(Config.COMMAND_HAND_LER) == 1:
                 elitesbot = "^\\" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
-            args["pattern"] = re.compile(regelitesbot + pattern)
+            args["pattern"] = re.compile(elitesbot + pattern)
             if command is not None:
                 cmd = reg + command
             else:
