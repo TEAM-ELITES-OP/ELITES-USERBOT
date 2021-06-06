@@ -18,7 +18,7 @@ async def blowjob(event):
         	
         return
     elif event.is_private:
-        await edit_or_reply(event, "Bulati hai magar jane ka nahi, Humare samne jyada bak bak karne ka nahi, Agar kar bhi liya na humse gmute lene se apna gand chupana nhi...")
+        await edit_or_reply(event, "`Bulati hai magar jane ka nahi, Humare samne jyada bak bak karne ka nahi, Agar kar bhi liya na humse gmute lene se apna gand chupana nhi...`")
         await asyncio.sleep(3)
         private = True
     reply = await event.get_reply_message()
@@ -39,7 +39,7 @@ async def blowjob(event):
     except Exception as e:
         await edit_or_reply(event, "Error occured!\nError is " + str(e))
     else:
-        await edit_or_reply(event, "Bulati hai magar jane ka nahi, Humare samne jyada bak bak karne ka nahi,Agar kar bhi liya na humse gmute lene se apna gand chupana nhi...")
+        await edit_or_reply(event, "`Bulati hai magar jane ka nahi, Humare samne jyada bak bak karne ka nahi,Agar kar bhi liya na humse gmute lene se apna gand chupana nhi...`")
 
 
 @bot.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
