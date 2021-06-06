@@ -5,12 +5,12 @@ from .. import ALIVE_NAME, CMD_HELP
 from ..utils import admin_cmd, edit_or_reply, sudo_cmd
 from ..cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "elites User"
-eliteboy = borg.uid
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "savage User"
+savagesameer = borg.uid
 
 
-@bot.on(admin_cmd(pattern=f"hbping$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"hbping$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"2ping$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"2ping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,6 +57,7 @@ async def _(event):
         )
     )
 
+
 @bot.on(admin_cmd(pattern="ping$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
@@ -69,7 +70,6 @@ async def _(event):
     await event.edit(
         f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n😎 𝙿𝙸𝙽𝙶: {ms}\n**😎 𝙼𝙰𝚂𝚃𝙴𝚁:** [{DEFAULTUSER}](tg://user?id={savagesameer})"
     )
-    
     
 
 CmdHelp("ping").add_command(
