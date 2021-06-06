@@ -313,7 +313,7 @@ async def demote(dmod):
     except BadRequestError:
         await elitesbotevent.edit(NO_PERM)
         return
-    await elitesbotevent.edit("Demoted Successfully!")
+    await elitesbotevent.edit("𝗕𝗮𝗱 𝗹𝘂𝗰𝗸 ‼️ 𝘁𝗲𝗿𝗶 𝗸𝗶𝘀𝗺𝗮𝘁 𝗻𝗮𝗵𝗶 𝗵𝗲 𝘆𝗮𝗵𝗮 𝗮𝗱𝗺𝗶𝗻 𝗯𝗮𝗻𝗮𝗻𝗲 𝗸𝗶")
     if BOTLOG:
         await dmod.client.send_message(
             BOTLOG_CHATID,
