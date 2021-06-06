@@ -68,7 +68,7 @@ async def gban(userbot):
     else:
         elitesbot = await edit_or_reply(ids, "`Ok! Gbaning this piece of shit....`")
     hum = await userbot.client.get_me()
-    await elitesbot.edit(f"`🔥Global Ban Iz Cumin💦.... Wait and watch nigga🚶`")
+    await elitesbot.edit(f"`Naam mera bawan kilo, 😝 Kaam mera chappan kilo, 😇 Bohot bhauk liya bete abb chup chap mera gban apni gand me le lo... 😋😋🔥`")
     my_mention = "[{}](tg://user?id={})".format(hum.first_name, hum.id)
     f"@{hum.username}" if hum.username else my_mention
     await userbot.get_chat()
