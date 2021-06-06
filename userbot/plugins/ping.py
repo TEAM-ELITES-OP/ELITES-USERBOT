@@ -57,7 +57,6 @@ async def _(event):
         )
     )
 
-
 @bot.on(admin_cmd(pattern="ping$", outgoing=True))
 @bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
@@ -68,8 +67,9 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"█▀█ \n█▀▀ \n\n █▀█ \n █▄█\n\n█▄░█ \n █░▀█ \n\n█▀▀ █ \n█▄█ ▄\n\n✥ **✪ Mᴀsᴛᴇʀ:** [{DEFAULTUSER}](tg://user?id={eliteboy})"
+        f"**█▀█ █▀█ █▄░█ █▀▀ █ \n█▀▀ █▄█ █░▀█ █▄█ ▄**\n\n😎 𝙿𝙸𝙽𝙶: {ms}\n**😎 𝙼𝙰𝚂𝚃𝙴𝚁:** [{DEFAULTUSER}](tg://user?id={savagesameer})"
     )
+    
     
 
 CmdHelp("ping").add_command(
