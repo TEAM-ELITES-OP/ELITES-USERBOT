@@ -23,7 +23,7 @@ async def _(event):
     await event.edit("Restarting **[ █░░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
     await event.edit("Restarting **[ ██░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
     await event.edit("Restarting **[ ███ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
-    await event.edit("Restarted [ ✓ ] ...\n\nYᴏᴜʀ Bᴏᴛ Hᴀs Bᴇᴇɴ Rᴇsᴛᴀʀᴛᴇᴅ..Sᴏ ᴘʟᴢ Wᴀɪᴛ Sᴏᴍᴇ Tɪᴍᴇ Aғᴛᴇʀ Tʜᴀᴛ Tʏᴘᴇ `.alive` ᴏʀ `.ping` Tᴏ Cʜᴇᴄᴋ I ᴀᴍ Oɴ Oʀ Nᴏᴛ")
+    await event.edit("Restarted [ ✓ ] ...\n\nYᴏᴜʀ Bᴏᴛ Hᴀs Bᴇᴇɴ Rᴇsᴛᴀʀᴛᴇᴅ ☑️ ..Sᴏ ᴘʟᴢ Wᴀɪᴛ Sᴏᴍᴇ Tɪᴍᴇ Aғᴛᴇʀ Tʜᴀᴛ Tʏᴘᴇ `.alive` ᴏʀ `.ping` Tᴏ Cʜᴇᴄᴋ I ᴀᴍ Oɴ Oʀ Nᴏᴛ")
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
