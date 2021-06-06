@@ -19,16 +19,9 @@ from elitesbot.utils import *
 from userbot.cmdhelp import CmdHelp
 
 KANGING_STR = [
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
-    "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ",
+    "kamaal tere nakhre, kamaal ka tera style , \n kang karne de bsdk aur mar ek smile😁.",
+    "Ye sticker hai sunny ki chut ke tarah hai sexy \n Kang kr lene de nhi toh teri maa ki chut kar denge aisi ki taisi..👅🥵",
+    "Chup chap Dekh udhar dhoni ne maraa sixer \n Tab tak kang kr lene de mereko tera sticker😜",
 ]
 
 elitesbot = Config.CUSTOM_STICKER_PACK_NAME
@@ -98,12 +91,13 @@ async def kang(args):
                 # User sent just custom emote, wants to push to default
                 # pack
                 emoji = splat[1]
-                packname = f"HB_{user.username}_by_{user.username}_{pack}"
-                packnick = (
-                        f"{user.username}_{pack}"
-                        if elitesbot
-                        else f"@{user.username}'s_{pack}"
-                    )
+
+        packname = f"HB_{user.username}_elitesbot_{pack}"
+        packnick = (
+            f"elitesbot Vol.{pack}"
+            if mafiabot
+            else f"@{user.username}'s elitesbot Vol.{pack}"
+        )
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -136,9 +130,9 @@ async def kang(args):
                     pack += 1
                     packname = f"HB_{user.username}_by_{user.username}_{pack}"
                     packnick = (
-                        f"{user.username}_{pack}"
-                        if elitesbot
-                        else f"@{user.username}'s_{pack}"
+                        f"elitesbot Vol.{pack}"
+                        if mafiabot
+                        else f"@{user.username}'s elitesbot Vol.{pack}"
                     )
                     await args.edit(
                         "`Switching to Pack "
