@@ -19,7 +19,7 @@ async def blowjob(event):
         return
     elif event.is_private:
         await edit_or_reply(event, "`Bulati hai magar jane ka nahi, Humare samne jyada bak bak karne ka nahi, Agar kar bhi liya na humse gmute lene se apna gand chupana nhi...`")
-        await asyncio.sleep(3)
+        await asyncio.sleep(50)
         private = True
     reply = await event.get_reply_message()
     if event.pattern_match.group(1) is not None:
@@ -29,7 +29,7 @@ async def blowjob(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await edit_or_reply(event, "I need a user to gmute. Please reply or get his uid")
+        return await edit_or_reply(event, "I need a user to gmute. Please reply or get his id")
     chat_id = event.chat_id
     chat = await event.get_chat()
     if is_muted(userid, "gmute"):
