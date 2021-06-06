@@ -18,12 +18,12 @@ from userbot import HEROKU_APP, bot
 @bot.on(admin_cmd(pattern="restart"))
 async def _(event):
     if event.fwd_from:
-        return
+        return                      
     await event.edit("Restarting **[ ░░░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
     await event.edit("Restarting **[ █░░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
     await event.edit("Restarting **[ ██░ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
     await event.edit("Restarting **[ ███ ]** ...\nType `.ping` or `.help` to check if I am working 🙂")
-    await event.edit("Restarted **[ ✓ ]** ...\nRestarted [ ✓ ] ...\n\nYOUR BOT HAS BEEN RESTARTED ✅ SO PLZ WAIT SOMETIME AFTER THAT TYPE  .ping or .help TO CHECK IF I AM WORKING🤓🤓")
+    await event.edit("Restarted **[ ✓ ]** ...\nRestarted [ ✓ ] ...\n\nYᴏᴜʀ Bᴏᴛ Hᴀs Bᴇᴇɴ Rᴇsᴛᴀʀᴛᴇᴅ..Sᴏ ᴘʟᴢ Wᴀɪᴛ Sᴏᴍᴇ Tɪᴍᴇ Aғᴛᴇʀ Tʜᴀᴛ Tʏᴘᴇ '.alive' ᴏʀ '.ping' Tᴏ Cʜᴇᴄᴋ I ᴀᴍ Oɴ Oʀ Nᴏᴛ")
     await bot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
