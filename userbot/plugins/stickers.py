@@ -95,7 +95,7 @@ async def kang(args):
         packname = f"HB_{user.username}_elitesbot_{pack}"
         packnick = (
             f"elitesbot Vol.{pack}"
-            if SAVAGEbot
+            if elitesbot
             else f"@{user.username}'s elitesbot Vol.{pack}"
         )
         cmd = "/newpack"
@@ -131,7 +131,7 @@ async def kang(args):
                     packname = f"HB_{user.username}_by_{user.username}_{pack}"
                     packnick = (
                         f"elitesbot Vol.{pack}"
-                        if SAVAGEbot
+                        if elitesbot
                         else f"@{user.username}'s elitesbot Vol.{pack}"
                     )
                     await args.edit(
