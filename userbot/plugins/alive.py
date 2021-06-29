@@ -22,10 +22,10 @@ ELITES = bot.uid
 
 edit_time = 5
 """ =======================CONSTANTS====================== """
-file1 = "https://telegra.ph/file/cf218c1f0934581d0db48.jpg"
+file1 = "https://telegra.ph/file/74686cebff547b3cd20da.jpg"
 """ =======================CONSTANTS====================== """
 
-pm_caption = "_🔥 #𝐄𝐋𝐈𝐓𝐄𝐒_𝐁𝐎𝐓_𝐎𝐍_𝐅𝐈𝐑𝐄 🔥_\n\n"
+pm_caption = "_🔥 #𝐁𝐄𝐒𝐓𝐈𝐄𝐒_𝐁𝐎𝐓_𝐎𝐍_𝐅𝐈𝐑𝐄 🔥_\n\n"
 
 
 pm_caption += f"               __↼𝙈𝘼𝙎𝙏𝙀𝙍 ⇀__\n**      『{DEFAULTUSER}』**\n\n"
@@ -35,13 +35,13 @@ pm_caption += "𖣘 𝘼𝘽𝙊𝙐𝙏 𝙈𝙔 𝙎𝙔𝙎𝙏𝙀𝙈 𖣘\
 
 
 pm_caption += "➾ Tᴇʟᴇᴛʜᴏɴ : 1.21.5\n"
-pm_caption += "➾ Eʟɪᴛᴇs Gʀᴏᴜᴘ  ➣ [𝙹𝙾𝙸𝙽](t.me/ELITES_official)\n"
+pm_caption += "➾ Bᴇsᴛɪᴇs Gʀᴏᴜᴘ  ➣ [𝙹𝙾𝙸𝙽](https://t.me/joinchat/O7FUnmgmSw5lNjA1)\n"
 pm_caption += "➾ Sᴜᴘᴘᴏʀᴛ Cʜᴀɴʟ ➣ [𝙹𝙾𝙸𝙽](https://t.me/ELITE_BOT_OFFICIAL)\n"
 pm_caption += "➾ Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ➣ [𝙹𝙾𝙸𝙽](https://t.me/ELITES_USERBOT)\n"
-pm_caption += "➾ Cʀᴇᴀᴛᴏʀ    ➣ [🔥Eʟɪᴛᴇ Bᴏʏ🔥](t.me/XD_ELITEBOY_XD)\n" 
-                  
+pm_caption += "➾ Cʀᴇᴀᴛᴏʀ    ➣ [🔥Eʟɪᴛᴇ Bᴏʏ🔥](t.me/ELITEBOY_OFFICIAL)\n" 
+                                          
 pm_caption += " \n"
-pm_caption += "[✨ Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ Eʟɪᴛᴇs Bᴏᴛ✨](https://github.com/TEAM-ELITES-OP/ELITES-BOT)"
+pm_caption += "[✨ Dᴇᴘʟᴏʏ Yᴏᴜʀ Oᴡɴ Bᴇsᴛɪᴇs Bᴏᴛ✨](https://github.com/TEAM-ELITES-OP/BESTIES-BOT)"
 
                        
 # @command(outgoing=True, pattern="^.alive$")
